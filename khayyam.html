@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa">
+<head>
+<meta charset="utf-8"/>
+<script>
+    (function () {
+      try {
+        if (localStorage.getItem("okai-lang") === "en") {
+          document.documentElement.lang = "en";
+          document.documentElement.dir = "ltr";
+        }
+      } catch (e) {}
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>مؤسسه نجومی عمر خیام</title>
+<meta content="مؤسسه نجومی عمر خیام؛ آشنایی با آسمان، میراث نجوم ایران و پرسش‌های کیهان. این صفحه معرفی نمایشی یک مؤسسه خیالی است." name="description"/>
+<meta content="#091426" name="theme-color"/>
+<link href="assets/icons/mark.svg" rel="icon" type="image/svg+xml"/>
+<link as="font" crossorigin="" href="assets/fonts/vazirmatn-arabic.woff2" rel="preload" type="font/woff2"/>
+<link as="image" href="assets/images/hero.jpg" rel="preload"/>
+<style>
+    /* Tokens */
+    :root {
+      --night: #091426;
+      --lapis: #10264A;
+      --turquoise: #35AFA5;
+      --gold: #C9A96E;
+      --ivory: #F7F5EF;
+      --mist: #AAB8C8;
+      --ink: #10264A;
+      --ink-soft: #3c5168;
+      --line: rgba(201, 169, 110, 0.55);
+      --header: 4.4rem;
+      --wrap: 1180px;
+      --wide: 1320px;
+      --fs-h1: clamp(2.35rem, 5vw, 4.7rem);
+      --fs-h2: clamp(1.85rem, 3vw, 2.85rem);
+      --fs-body: 1.0625rem;
+      --lh: 1.9;
+      --section: clamp(4.5rem, 8vw, 7.5rem);
+    }
+    @font-face {
+      font-family: "Vazirmatn";
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url("assets/fonts/vazirmatn-arabic.woff2") format("woff2");
+      unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C, U+200D;
+    }
+    @font-face {
+      font-family: "Vazirmatn";
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url("assets/fonts/vazirmatn-latin.woff2") format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201D, U+2026, U+20AC, U+2212;
+    }
+    @font-face {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 200 800;
+      font-display: swap;
+      src: url("assets/fonts/manrope-latin.woff2") format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201D, U+2026, U+20AC, U+2212;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html[lang="fa"] { --lh: 1.95; }
+    html[lang="en"] { --lh: 1.65; }
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--ink);
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      font-size: var(--fs-body);
+      line-height: var(--lh);
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+    }
+    html[lang="en"] body { font-family: "Manrope", "Vazirmatn", sans-serif; }
+    html[lang="fa"] .t-en, html[lang="en"] .t-fa { display: none !important; }
+    img { max-width: 100%; display: block; }
+    button, input, select { font: inherit; color: inherit; }
+    button { cursor: pointer; }
+    a { color: inherit; }
+    h1, h2, h3 { text-wrap: balance; font-weight: 650; line-height: 1.2; margin: 0; }
+    html[lang="en"] h1, html[lang="en"] h2 { letter-spacing: -0.03em; font-weight: 600; }
+    p { text-wrap: pretty; margin: 0; }
+    :focus { outline: none; }
+    :focus-visible { outline: 2px solid var(--turquoise); outline-offset: 3px; }
+    ::selection { background: var(--turquoise); color: var(--night); }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+    [hidden] { display: none !important; }
+    .skip {
+      position: absolute; inset-inline-start: 1rem; top: -4rem; z-index: 80;
+      background: var(--gold); color: var(--night); padding: .6rem 1rem; text-decoration: none;
+    }
+    .skip:focus { top: 1rem; }
+    .wrap { width: min(var(--wrap), calc(100% - 2.5rem)); margin-inline: auto; }
+    .wrap-wide { width: min(var(--wide), calc(100% - 2.5rem)); margin-inline: auto; }
+    section { scroll-margin-top: 5.2rem; }
+    .eyebrow {
+      display: flex; align-items: center; gap: .75rem;
+      color: var(--gold); font-size: .82rem; margin: 0 0 1rem;
+    }
+    html[lang="en"] .eyebrow { letter-spacing: .14em; text-transform: uppercase; font-size: .74rem; }
+    .eyebrow::before { content: ""; width: 2rem; height: 1px; background: var(--gold); flex: none; }
+    .on-light .eyebrow { color: var(--lapis); }
+    .on-light .eyebrow::before { background: var(--gold); }
+
+    /* Header */
+    .site-header {
+      position: fixed; inset: 0 0 auto 0; z-index: 40; color: var(--ivory);
+      border-bottom: 1px solid transparent;
+    }
+    .site-header.is-scrolled, .site-header.is-open {
+      background: var(--night);
+      border-bottom-color: var(--line);
+    }
+    .header-inner {
+      min-height: var(--header);
+      width: min(var(--wide), calc(100% - 1.5rem));
+      margin-inline: auto;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; color: inherit; min-width: 0; }
+    .mark { width: 2.6rem; height: 2.6rem; flex: none; color: var(--gold); }
+    .brand-name { font-size: .98rem; line-height: 1.25; }
+    .brand-sub { margin: .1rem 0 0; color: var(--mist); font-size: .68rem; line-height: 1.3; }
+    .brand-sub .t-en { font-family: Manrope, sans-serif; letter-spacing: .04em; }
+    .brand-sub .t-fa { font-family: Vazirmatn, sans-serif; }
+    .name-short { display: none !important; }
+    .nav { display: flex; align-items: center; gap: 1.15rem; margin-inline-start: 1.25rem; }
+    .nav a {
+      text-decoration: none; font-size: .94rem; padding: .35rem 0;
+      border-bottom: 1px solid transparent;
+    }
+    .nav a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+    .header-actions { margin-inline-start: auto; display: flex; align-items: center; gap: .55rem; }
+    .menu-btn {
+      display: none; width: 2.75rem; height: 2.75rem; border: 1px solid rgba(247,245,239,.4);
+      background: transparent; color: var(--ivory); align-items: center; justify-content: center;
+    }
+    .menu-btn svg { width: 1.15rem; height: 1.15rem; }
+    .site-header.is-open .icon-open, .icon-close { display: none; }
+    .site-header.is-open .icon-close { display: block; }
+    .lang-btn, .btn {
+      min-height: 2.75rem; padding: 0 1rem; border: 1px solid transparent;
+      background: var(--ivory); color: var(--night); text-decoration: none;
+      display: inline-flex; align-items: center; justify-content: center; gap: .4rem;
+    }
+    .lang-btn { background: transparent; color: var(--ivory); border-color: rgba(247,245,239,.45); min-width: 3.1rem; }
+    .lang-btn:hover, .btn-line:hover { border-color: var(--gold); color: var(--gold); background: transparent; }
+    .btn:hover { background: var(--gold); }
+    .btn-line { background: transparent; color: var(--ivory); border-color: rgba(247,245,239,.55); }
+    .btn-ink { background: var(--lapis); color: var(--ivory); }
+    .btn-ink:hover { background: var(--night); }
+    .arrow { width: .9rem; height: .9rem; }
+    html[dir="rtl"] .arrow { transform: scaleX(-1); }
+
+    /* Hero */
+    .hero {
+      position: relative; min-height: 100svh; display: flex; align-items: flex-end;
+      color: var(--ivory); background: var(--night); overflow: hidden;
+    }
+    .hero-media, .hero-scrim { position: absolute; inset: 0; }
+    .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 55% 45%; }
+    html[dir="ltr"] .hero-media img { transform: scaleX(-1); }
+    html[dir="rtl"] .hero-scrim {
+      background:
+        linear-gradient(180deg, rgba(9,20,38,.72) 0%, rgba(9,20,38,.12) 26%, rgba(9,20,38,.45) 70%, rgba(9,20,38,.94) 100%),
+        linear-gradient(90deg, rgba(9,20,38,0) 0%, rgba(9,20,38,.2) 34%, rgba(9,20,38,.82) 62%, rgba(9,20,38,.94) 100%);
+    }
+    html[dir="ltr"] .hero-scrim {
+      background:
+        linear-gradient(180deg, rgba(9,20,38,.72) 0%, rgba(9,20,38,.12) 26%, rgba(9,20,38,.45) 70%, rgba(9,20,38,.94) 100%),
+        linear-gradient(90deg, rgba(9,20,38,.94) 0%, rgba(9,20,38,.82) 38%, rgba(9,20,38,.2) 66%, rgba(9,20,38,0) 100%);
+    }
+    .orbit {
+      position: absolute; z-index: 1; width: min(16rem, 34vw); inset-inline-end: 7%;
+      bottom: 14%; opacity: .4; pointer-events: none;
+    }
+    .orbit ellipse { transform-origin: 80px 80px; animation: spin 72s linear infinite; }
+    .hero-content {
+      position: relative; z-index: 2; width: min(var(--wrap), calc(100% - 2.5rem));
+      margin-inline: auto; padding: calc(var(--header) + 2rem) 0 clamp(3rem, 8vh, 5.5rem);
+    }
+    .hero h1 { max-width: 11.2em; font-size: var(--fs-h1); text-shadow: 0 2px 22px rgba(9,20,38,.8); }
+    .lede { max-width: 36rem; margin-top: 1.15rem; color: #e7eef6; font-size: 1.08rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.7rem; }
+    .hero-note { margin-top: 1.4rem; color: var(--mist); font-size: .82rem; }
+
+    /* Intro */
+    .intro { padding: var(--section) 0; background: var(--ivory); }
+    .intro-grid, .heritage-lead, .programs-grid, .apod-grid, .topic-band {
+      display: grid; gap: 2rem; align-items: center;
+    }
+    .intro-grid { grid-template-columns: 1.15fr .85fr; }
+    .intro h2, .heritage h2, .apod h2, .programs h2, .cosmos h2 { font-size: var(--fs-h2); max-width: 16em; }
+    .prose { margin-top: 1.1rem; max-width: 40rem; color: var(--ink-soft); }
+    .on-dark .prose, .on-dark p { color: #d5deea; }
+    .frame { position: relative; }
+    .frame img { width: 100%; height: auto; object-fit: cover; }
+    .frame::before, .frame::after {
+      content: ""; position: absolute; width: 1.35rem; height: 1.35rem; pointer-events: none;
+    }
+    .frame::before {
+      top: -.4rem; inset-inline-start: -.4rem;
+      border-top: 1px solid var(--gold); border-inline-start: 1px solid var(--gold);
+    }
+    .frame::after {
+      bottom: -.4rem; inset-inline-end: -.4rem;
+      border-bottom: 1px solid var(--gold); border-inline-end: 1px solid var(--gold);
+    }
+    figcaption { margin-top: .75rem; font-size: .82rem; color: var(--ink-soft); }
+    .on-dark figcaption { color: var(--mist); }
+    .pillars {
+      list-style: none; padding: 0; margin: 2.2rem 0 0;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(16,38,74,.16);
+    }
+    .pillars li { padding: 1.15rem 1rem 0; border-inline-start: 1px solid rgba(16,38,74,.16); }
+    .pillars li:first-child { border-inline-start: 0; padding-inline-start: 0; }
+    .idx { color: var(--gold); font-variant-numeric: tabular-nums; font-size: .82rem; }
+    .pillars h3 { margin: .4rem 0 .45rem; font-size: 1.15rem; }
+    .pillars p { color: var(--ink-soft); font-size: .96rem; }
+
+    /* Cosmos */
+    .cosmos { background: var(--night); color: var(--ivory); padding: var(--section) 0; }
+    .cosmos-head { max-width: 40rem; margin-bottom: 2rem; }
+    .cosmos-grid {
+      display: grid; gap: .85rem;
+      grid-template-columns: 1.35fr 1fr;
+      grid-template-areas: "solar stars" "solar hole" "cosmo cosmo" "exo exo";
+    }
+    .topic-solar { grid-area: solar; }
+    .topic-stars { grid-area: stars; }
+    .topic-hole { grid-area: hole; }
+    .topic-cosmo { grid-area: cosmo; }
+    .topic-exo { grid-area: exo; }
+    .topic-solar, .topic-hole { position: relative; overflow: hidden; min-height: 18rem; color: var(--ivory); }
+    .topic-solar { min-height: 38rem; }
+    .topic-solar img, .topic-hole img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .topic-copy { position: relative; z-index: 1; }
+    .topic-solar .topic-copy, .topic-hole .topic-copy {
+      position: absolute; inset-inline: 0; bottom: 0; padding: 2.4rem 1.2rem 1.15rem;
+      background: linear-gradient(180deg, transparent, rgba(9,20,38,.9));
+    }
+    .topic-stars {
+      display: flex; flex-direction: column; background: #0d2244;
+      border: 1px solid rgba(201,169,110,.38); min-height: 18rem; overflow: hidden;
+    }
+    .topic-stars img { width: 100%; height: 11.5rem; object-fit: cover; object-position: center 40%; }
+    .topic-stars .topic-copy { padding: 1rem 1.1rem 1.15rem; }
+    .plate-no { display: block; color: var(--gold); font-size: .75rem; font-variant-numeric: tabular-nums; margin-bottom: .35rem; }
+    .topic h3 { font-size: 1.45rem; margin-bottom: .4rem; }
+    .topic p { font-size: .95rem; color: #d7e0ea; }
+    .topic-stars p { color: #d7e0ea; }
+    .more {
+      appearance: none; background: none; border: 0; border-bottom: 1px solid var(--gold);
+      color: var(--gold); padding: .35rem 0; margin-top: .75rem; min-height: 2.75rem;
+      position: relative; z-index: 2;
+    }
+    .topic { cursor: pointer; }
+    .topic-band { border-top: 1px solid var(--line); padding-top: 1.2rem; grid-template-columns: 1.05fr .95fr; }
+    .topic-exo {
+      background: var(--ivory); color: var(--ink); padding: 1.1rem;
+      grid-template-columns: .9fr 1.1fr;
+    }
+    .topic-exo p { color: var(--ink-soft); }
+    .topic-exo .plate-no, .topic-exo .more { color: var(--lapis); border-bottom-color: var(--lapis); }
+    .topic-exo img, .topic-cosmo img { width: 100%; height: auto; }
+    .topic img { transition: transform .7s ease; }
+    .topic:hover img { transform: scale(1.035); }
+
+    /* Heritage */
+    .heritage { background: var(--ivory); padding: var(--section) 0; }
+    .heritage-lead { grid-template-columns: .9fr 1.1fr; align-items: end; }
+    .heritage-photo { min-height: 22rem; object-fit: cover; width: 100%; height: 28rem; }
+    .scholars {
+      display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 1.5rem 1.75rem;
+      margin: 3rem 0; padding-top: 2rem; border-top: 1px solid rgba(16,38,74,.16);
+    }
+    .scholars h3 { font-size: 1.35rem; margin: .35rem 0 .6rem; }
+    .scholars p { color: var(--ink-soft); font-size: .98rem; }
+    .scholar-side { border-inline-start: 1px solid var(--line); padding-inline-start: 1.1rem; }
+    .pair { display: grid; grid-template-columns: .78fr 1.22fr; gap: 1rem; }
+    .pair img { width: 100%; height: 22rem; object-fit: cover; }
+    .astrolabe-img { object-position: center; }
+
+    /* Programs */
+    .programs { background: #07101f; color: var(--ivory); padding: var(--section) 0; }
+    .programs-grid { grid-template-columns: 1.15fr .85fr; align-items: start; }
+    .note {
+      border-inline-start: 2px solid var(--gold);
+      padding-inline-start: 1rem; margin: 1.1rem 0 1.4rem; color: var(--mist);
+    }
+    .program {
+      width: 100%; text-align: start; background: transparent; border: 0;
+      border-bottom: 1px solid rgba(201,169,110,.35);
+      display: grid; grid-template-columns: 8.5rem 1fr auto; gap: 1rem; align-items: center;
+      padding: 1.15rem 0; color: inherit; min-height: 4.6rem;
+    }
+    .program:hover .program-title { color: var(--gold); }
+    .program time, .when { color: var(--gold); font-variant-numeric: tabular-nums; font-size: .92rem; }
+    .kind { display: block; color: var(--mist); font-size: .82rem; margin-top: .2rem; }
+    .program-go { color: var(--gold); font-size: .85rem; }
+    .obs-photo { width: 100%; height: 26rem; object-fit: cover; }
+
+    /* APOD */
+    .apod { background: var(--ivory); padding: var(--section) 0; }
+    .apod-grid { grid-template-columns: 1.45fr .7fr; align-items: end; }
+    .apod img { width: 100%; height: min(68vh, 38rem); object-fit: cover; }
+    .kicker-sample {
+      display: inline-block; border: 1px solid var(--lapis); padding: .2rem .5rem;
+      font-size: .75rem; margin-bottom: .8rem;
+    }
+    .apod h2 { font-size: clamp(1.6rem, 2.4vw, 2.2rem); }
+    .when-line { margin: .8rem 0; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+
+    /* Footer */
+    .site-footer {
+      background: var(--night) url("assets/icons/girih.svg") center / 140px 140px;
+      color: var(--ivory); padding: 3.5rem 0 1.5rem; position: relative;
+    }
+    .site-footer::before {
+      content: ""; position: absolute; inset: 0;
+      background: rgba(9, 20, 38, 0.92); pointer-events: none;
+    }
+    .footer-grid, .legal { position: relative; z-index: 1; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr .8fr .9fr; gap: 2rem; }
+    .site-footer .prose { color: #d5deea; }
+    body.nav-lock { overflow: hidden; }
+    .site-footer a { text-decoration: none; }
+    .site-footer a:hover { color: var(--gold); }
+    .foot-nav { display: flex; flex-direction: column; gap: .55rem; }
+    .foot-label { color: var(--gold); font-size: .78rem; margin-bottom: .7rem; }
+    html[lang="en"] .foot-label { letter-spacing: .12em; text-transform: uppercase; }
+    .contact p { color: var(--mist); margin-top: .35rem; }
+    .legal {
+      margin: 2rem auto 0; padding-top: 1rem; border-top: 1px solid var(--line);
+      color: var(--mist); font-size: .82rem; width: min(var(--wide), calc(100% - 2.5rem));
+    }
+    .lang-btn.on-footer { margin-top: 1rem; }
+
+    /* Dialogs */
+    .sheet {
+      width: min(42rem, calc(100vw - 1.25rem));
+      max-height: min(86vh, 44rem);
+      overflow: auto; border: 0; padding: 1.4rem 1.4rem 1.6rem;
+      background: var(--ivory); color: var(--ink);
+    }
+    .sheet::backdrop { background: rgba(9, 20, 38, .78); }
+    .sheet-top { display: flex; justify-content: flex-end; margin-bottom: .4rem; }
+    .text-btn { background: none; border: 0; border-bottom: 1px solid var(--lapis); padding: .3rem 0; min-height: 2.75rem; }
+    .sheet h3 { font-size: 1.7rem; margin-bottom: .7rem; }
+    .sheet .meta { color: var(--ink-soft); margin-bottom: .8rem; }
+    .sheet p + p { margin-top: .8rem; }
+    .fields { display: grid; gap: 1rem; margin-top: 1rem; }
+    .fields label { display: grid; gap: .35rem; font-size: .92rem; }
+    .fields input, .fields select {
+      min-height: 2.85rem; border: 0; border-bottom: 1px solid rgba(16,38,74,.35);
+      background: transparent; border-radius: 0; padding: .2rem 0;
+    }
+    .form-error { color: #8a2e2e; margin-top: .8rem; }
+    .done { margin-top: .6rem; }
+
+    /* Motion reveal — content stays available without JS */
+    .js .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+    .js .reveal.in { opacity: 1; transform: none; }
+
+    @media (max-width: 980px) {
+      .menu-btn { display: inline-flex; }
+      .nav {
+        position: fixed; inset: 0; z-index: 30; background: var(--night);
+        flex-direction: column; justify-content: center; align-items: flex-start;
+        padding: 6rem 2rem; gap: .4rem;
+        transform: translateY(-102%); visibility: hidden;
+      }
+      .nav.is-open { transform: none; visibility: visible; }
+      .nav a { font-size: clamp(1.5rem, 5vw, 2rem); }
+      .intro-grid, .heritage-lead, .programs-grid, .apod-grid, .pair,
+      .scholars, .topic-band, .topic-exo, .footer-grid, .pillars, .cosmos-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: none;
+      }
+      .topic-solar, .topic-stars, .topic-hole, .topic-cosmo, .topic-exo { grid-area: auto; }
+      .topic-solar { min-height: 26rem; }
+      .heritage-photo, .pair img, .obs-photo, .apod img { height: 16rem; }
+      .program { grid-template-columns: 1fr; gap: .25rem; }
+      .brand-sub { display: none; }
+      .orbit { display: none; }
+    }
+    @media (max-width: 720px) {
+      .name-full { display: none !important; }
+      html[lang="fa"] .name-short.t-fa,
+      html[lang="en"] .name-short.t-en { display: inline !important; }
+      .wrap, .wrap-wide, .hero-content { width: min(var(--wrap), calc(100% - 1.5rem)); }
+      .header-inner { width: min(var(--wide), calc(100% - 1rem)); }
+      .btn-join { padding-inline: .7rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+      .js .reveal { opacity: 1; transform: none; }
+      .topic:hover img { transform: none; }
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+<style>
+</style>
+<style>
+/* دکمه شناور و قابل‌جابجایی بازگشت به WEBDEK */
+.webdek-float-back {
+  position:fixed; z-index:10000; left:16px; top:50%; transform:translateY(-50%);
+  width:58px; height:58px; display:grid; place-items:center; padding:5px;
+  border:1px solid #d8f078; border-radius:50%; background:#214b3b; color:#17392d;
+  box-shadow:0 8px 26px rgba(0,0,0,.28); cursor:grab; touch-action:none;
+  user-select:none; -webkit-user-select:none; text-decoration:none;
+  transition:background .18s, box-shadow .18s; -webkit-tap-highlight-color:transparent;
+}
+.webdek-float-back:hover { background:#17392d; box-shadow:0 10px 30px rgba(0,0,0,.34); }
+.webdek-float-back:active { cursor:grabbing; }
+.webdek-float-back img { display:block; width:43px; height:43px; object-fit:contain; pointer-events:none; -webkit-user-drag:none; }
+.webdek-float-back .back-arrow {
+  position:absolute; right:-2px; bottom:-2px; width:22px; height:22px; display:grid; place-items:center;
+  border:2px solid #fff; border-radius:50%; background:#d8f078; color:#17392d; pointer-events:none;
+}
+.webdek-float-back .back-arrow svg { width:12px; height:12px; display:block; }
+.webdek-float-back:focus-visible { outline:3px solid #d8f078; outline-offset:4px; }
+@media(max-width:600px) { .webdek-float-back { width:53px; height:53px; left:10px; } .webdek-float-back img { width:39px; height:39px; } }
+</style>
+
+</head>
+<body><a aria-label="بازگشت به وب‌دک؛ برای جابه‌جایی بکشید" class="webdek-float-back" href="index.html" title="بازگشت به WEBDEK · برای جابه‌جایی بکشید">
+  <img src="assets/webdek-logo.png" alt="لوگوی WEBDEK" draggable="false" />
+  <span class="back-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
+</a>
+<a class="skip" href="#main"><span class="t-fa">رفتن به محتوا</span><span class="t-en">Skip to content</span></a>
+<header class="site-header" id="site-header">
+<div class="header-inner">
+<a class="brand" href="#top">
+<svg aria-hidden="true" class="mark" focusable="false" viewbox="0 0 64 64">
+<circle cx="32" cy="32" fill="none" r="26" stroke="currentColor" stroke-width="1.4"></circle>
+<circle cx="32" cy="32" fill="none" opacity=".75" r="22.2" stroke="currentColor" stroke-width="0.45"></circle>
+<path d="M32 6.2v3.2M32 54.6v3.2M6.2 32h3.2M54.6 32h3.2M13.2 13.2l2.2 2.2M48.6 48.6l2.2 2.2M50.8 13.2l-2.2 2.2M15.4 48.6l-2.2 2.2" stroke="currentColor" stroke-width="0.7"></path>
+<rect fill="none" height="20" stroke="currentColor" stroke-width="1.3" width="20" x="22" y="22"></rect>
+<rect fill="none" height="20" stroke="currentColor" stroke-width="1.3" transform="rotate(45 32 32)" width="20" x="22" y="22"></rect>
+<circle cx="32" cy="32" fill="#35AFA5" r="2.1"></circle>
+<circle cx="46.2" cy="23.6" fill="currentColor" r="1.8"></circle>
+</svg>
+<span>
+<span class="brand-name">
+<span class="t-fa name-full">مؤسسه نجومی عمر خیام</span>
+<span class="t-fa name-short">عمر خیام</span>
+<span class="t-en name-full">Omar Khayyam Astronomical Institute</span>
+<span class="t-en name-short">Khayyam</span>
+</span>
+<span class="brand-sub">
+<span class="t-fa">Omar Khayyam Astronomical Institute</span>
+<span class="t-en">مؤسسه نجومی عمر خیام</span>
+</span>
+</span>
+</a>
+<nav aria-label="اصلی" class="nav" data-aria-en="Primary" data-aria-fa="اصلی" id="site-nav">
+<a href="#intro"><span class="t-fa">معرفی</span><span class="t-en">Institute</span></a>
+<a href="#cosmos"><span class="t-fa">کیهان</span><span class="t-en">Cosmos</span></a>
+<a href="#heritage"><span class="t-fa">میراث</span><span class="t-en">Heritage</span></a>
+<a href="#programs"><span class="t-fa">رصد</span><span class="t-en">Programs</span></a>
+<a href="#apod"><span class="t-fa">تصویر</span><span class="t-en">Image</span></a>
+</nav>
+<div class="header-actions">
+<button aria-label="Switch language to English" aria-pressed="false" class="lang-btn" data-aria-en="تغییر زبان به فارسی" data-aria-fa="Switch language to English" id="lang-toggle" type="button">
+<span class="t-fa">EN</span><span class="t-en">فا</span>
+</button>
+<button class="btn btn-join" id="open-join" type="button">
+<span class="t-fa">عضویت</span><span class="t-en">Membership</span>
+</button>
+<button aria-controls="site-nav" aria-expanded="false" aria-label="باز کردن منو" class="menu-btn" data-aria-en="Open menu" data-aria-fa="باز کردن منو" id="menu-btn" type="button">
+<svg aria-hidden="true" class="icon-open" viewbox="0 0 16 16"><path d="M1 3.5h14M1 8h14M1 12.5h14" stroke="currentColor" stroke-width="1.2"></path></svg>
+<svg aria-hidden="true" class="icon-close" viewbox="0 0 16 16"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.2"></path></svg>
+</button>
+</div>
+</div>
+</header>
+<main id="main">
+<section class="hero" id="top">
+<div class="hero-media">
+<img alt="نمای هنری از آسمان پرستاره و بنایی با گنبد و طاق، الهام‌گرفته از معماری ایرانی" data-alt-en="Artistic night view of the Milky Way above a domed building inspired by Iranian architecture" data-alt-fa="نمای هنری از آسمان پرستاره و بنایی با گنبد و طاق، الهام‌گرفته از معماری ایرانی" fetchpriority="high" height="1008" src="assets/images/hero.jpg" width="1792"/>
+<div class="hero-scrim"></div>
+</div>
+<svg aria-hidden="true" class="orbit" viewbox="0 0 160 160">
+<circle cx="80" cy="80" fill="none" r="62" stroke="#C9A96E" stroke-width="0.6"></circle>
+<ellipse cx="80" cy="80" fill="none" rx="62" ry="24" stroke="#35AFA5" stroke-width="0.7"></ellipse>
+<circle cx="142" cy="80" fill="#F7F5EF" r="3"></circle>
+</svg>
+<div class="hero-content">
+<p class="eyebrow"><span class="t-fa">مؤسسه نجومی عمر خیام</span><span class="t-en">Omar Khayyam Astronomical Institute</span></p>
+<h1>
+<span class="t-fa">از میراث کهن تا افق‌های ناشناخته کیهان</span>
+<span class="t-en">From Ancient Wisdom to the Frontiers of the Cosmos</span>
+</h1>
+<p class="lede">
+<span class="t-fa">مؤسسه نجومی عمر خیام؛ تلاقی دانش، اندیشه و شگفتی‌های آسمان.</span>
+<span class="t-en">Omar Khayyam Astronomical Institute brings together scientific curiosity, astronomical discovery, and Iran's rich legacy of celestial observation.</span>
+</p>
+<div class="hero-actions">
+<a class="btn" href="#cosmos"><span class="t-fa">جهان را کاوش کنید</span><span class="t-en">Explore the Cosmos</span></a>
+<a class="btn btn-line" href="#programs"><span class="t-fa">برنامه‌های رصدی</span><span class="t-en">Observing Programs</span></a>
+</div>
+<p class="hero-note"><span class="t-fa">نمای هنری. این بنا رصدخانه واقعی  نیست.</span><span class="t-en">An artistic view — not a photograph of a real institute observatory.</span></p>
+</div>
+</section>
+<section class="intro on-light reveal" id="intro">
+<div class="wrap">
+<div class="intro-grid">
+<div>
+<p class="eyebrow"><span class="t-fa">۰۱ — درباره مؤسسه</span><span class="t-en">01 — The Institute</span></p>
+<h2><span class="t-fa">دانش آسمان، با دقت و بدون افسانه</span><span class="t-en">The sky, studied with care</span></h2>
+<p class="prose">
+<span class="t-fa">نجوم، از دیرباز بخشی از تاریخ دانش در ایران بوده است. مؤسسه نجومی عمر خیام با الهام از این میراث و با نگاهی رو به آینده، بستری برای آشنایی با آسمان، گسترش دانش نجومی و تجربه شگفتی‌های کیهان فراهم می‌کند.</span>
+<span class="t-en">Astronomy has long been part of the history of knowledge in Iran. Inspired by that legacy and turned toward what is still unknown, the Omar Khayyam Astronomical Institute is a place to learn the sky, deepen astronomical understanding, and meet the cosmos with curiosity rather than spectacle.</span>
+</p>
+<ul class="pillars">
+<li>
+<span class="idx"><span class="t-fa">۰۱</span><span class="t-en">01</span></span>
+<h3><span class="t-fa">مشاهده</span><span class="t-en">Observation</span></h3>
+<p><span class="t-fa">از چشم غیرمسلح تا تلسکوپ؛ دیدن آسمان به عنوان یک مهارت.</span><span class="t-en">From the unaided eye to the telescope — looking at the sky as a skill.</span></p>
+</li>
+<li>
+<span class="idx"><span class="t-fa">۰۲</span><span class="t-en">02</span></span>
+<h3><span class="t-fa">آموزش</span><span class="t-en">Learning</span></h3>
+<p><span class="t-fa">مسیرهای روشن برای علاقه‌مندان، بی‌ادعای اغراق.</span><span class="t-en">Clear paths for curious readers, without inflated claims.</span></p>
+</li>
+<li>
+<span class="idx"><span class="t-fa">۰۳</span><span class="t-en">03</span></span>
+<h3><span class="t-fa">میراث</span><span class="t-en">Legacy</span></h3>
+<p><span class="t-fa">تاریخ نجوم ایران، با وفاداری به آنچه منابع می‌گویند.</span><span class="t-en">Iran’s astronomical history, kept faithful to the record.</span></p>
+</li>
+</ul>
+</div>
+<figure class="frame">
+<img alt="تصویر نمایشی از یک جلسه آشنایی با تلسکوپ بر بام، هنگام غروب" data-alt-en="Sample image of an introductory telescope session on a rooftop at dusk" data-alt-fa="تصویر نمایشی از یک جلسه آشنایی با تلسکوپ بر بام، هنگام غروب" height="1067" loading="lazy" src="assets/images/rooftop-lesson.jpg" width="1600"/>
+<figcaption><span class="t-fa">تصویر نمایشی از یک جلسه آشنایی با آسمان.</span><span class="t-en">A sample image of an introductory session under the evening sky.</span></figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section class="cosmos on-dark reveal" id="cosmos">
+<div class="wrap-wide">
+<div class="cosmos-head">
+<p class="eyebrow"><span class="t-fa">۰۲ — کاوش در کیهان</span><span class="t-en">02 — The Cosmos</span></p>
+<h2><span class="t-fa">پنج مدخل برای خواندن آسمان</span><span class="t-en">Five ways into the sky</span></h2>
+<p class="prose"><span class="t-fa">هر مدخل دریچه‌ای کوتاه است، نه دانشنامه. شرح بلندتر را در همان صفحه باز کنید.</span><span class="t-en">Each entry is a short opening, not an encyclopedia. A longer note opens on this page.</span></p>
+</div>
+<div class="cosmos-grid">
+<article class="topic topic-solar">
+<img alt="تصویر علمی از خورشید و سیاره‌ها بر زمینه‌ای تاریک" data-alt-en="Scientific visualization of the Sun and planets against deep space" data-alt-fa="تصویر علمی از خورشید و سیاره‌ها بر زمینه‌ای تاریک" height="1408" loading="lazy" src="assets/images/solar-system.jpg" width="1408"/>
+<div class="topic-copy">
+<span class="plate-no"><span class="t-fa">۰۱</span><span class="t-en">01</span></span>
+<h3><span class="t-fa">منظومه شمسی</span><span class="t-en">The Solar System</span></h3>
+<p><span class="t-fa">هشت سیاره، قمرها، سیارک‌ها و خورشید؛ سامانه‌ای نزدیک با پرسش‌های باز.</span><span class="t-en">Eight planets, their moons, the asteroids, and the Sun — a nearby system that still holds open questions.</span></p>
+<button class="more" data-panel="panel-solar" type="button"><span class="t-fa">شرح منظومه شمسی</span><span class="t-en">On the Solar System</span></button>
+</div>
+</article>
+<article class="topic topic-stars">
+<img alt="راه شیری بر فراز تپه‌های خشک، با چند تلسکوپ در پیش‌زمینه" data-alt-en="The Milky Way above dry hills, with telescopes in the foreground" data-alt-fa="راه شیری بر فراز تپه‌های خشک، با چند تلسکوپ در پیش‌زمینه" height="1067" loading="lazy" src="assets/images/stargazing.jpg" width="1600"/>
+<div class="topic-copy">
+<span class="plate-no"><span class="t-fa">۰۲</span><span class="t-en">02</span></span>
+<h3><span class="t-fa">ستارگان و کهکشان‌ها</span><span class="t-en">Stars &amp; Galaxies</span></h3>
+<p><span class="t-fa">راه شیری تنها یکی از میلیاردها کهکشان است.</span><span class="t-en">The Milky Way is one galaxy among billions.</span></p>
+<button class="more" data-panel="panel-stars" type="button"><span class="t-fa">شرح ستارگان</span><span class="t-en">On stars</span></button>
+</div>
+</article>
+<article class="topic topic-hole">
+<img alt="بازنمایی قرص برافزایشی و سایه یک سیاه‌چاله" data-alt-en="Rendering of an accretion disk and the shadow of a black hole" data-alt-fa="بازنمایی قرص برافزایشی و سایه یک سیاه‌چاله" height="1200" loading="lazy" src="assets/images/black-hole.jpg" width="1600"/>
+<div class="topic-copy">
+<span class="plate-no"><span class="t-fa">۰۳</span><span class="t-en">03</span></span>
+<h3><span class="t-fa">سیاه‌چاله‌ها</span><span class="t-en">Black Holes</span></h3>
+<p><span class="t-fa">افق رویداد؛ نور از آن بیرون نمی‌آید.</span><span class="t-en">Light does not leave the event horizon.</span></p>
+<button class="more" data-panel="panel-hole" type="button"><span class="t-fa">شرح سیاه‌چاله</span><span class="t-en">On black holes</span></button>
+</div>
+</article>
+<article class="topic topic-band topic-cosmo">
+<img alt="نمودار تزئینی ساختار بزرگ‌مقیاس کیهان، نه داده رصدی" data-alt-en="A decorative diagram of large-scale cosmic structure, not observational data" data-alt-fa="نمودار تزئینی ساختار بزرگ‌مقیاس کیهان، نه داده رصدی" height="420" loading="lazy" src="assets/icons/cosmic-web.svg" width="800"/>
+<div>
+<span class="plate-no"><span class="t-fa">۰۴ — نمودار</span><span class="t-en">04 — Diagram</span></span>
+<h3><span class="t-fa">کیهان‌شناسی</span><span class="t-en">Cosmology</span></h3>
+<p><span class="t-fa">انبساط فضا، تابش زمینه کیهانی، و شبکه‌ای که کهکشان‌ها را به هم وصل می‌کند.</span><span class="t-en">The expansion of space, the cosmic microwave background, and the web that threads galaxies together. The drawing is a teaching plate, not a data map.</span></p>
+<button class="more" data-panel="panel-cosmos" type="button"><span class="t-fa">شرح کیهان‌شناسی</span><span class="t-en">On cosmology</span></button>
+</div>
+</article>
+<article class="topic topic-band topic-exo">
+<div>
+<span class="plate-no"><span class="t-fa">۰۵ — شکل آموزشی</span><span class="t-en">05 — Teaching figure</span></span>
+<h3><span class="t-fa">سیارات فراخورشیدی</span><span class="t-en">Exoplanets</span></h3>
+<p><span class="t-fa">وقتی سیاره‌ای از برابر ستاره‌اش می‌گذرد، نور ستاره اندکی کم می‌شود. منحنی پایین یک طرح آموزشی از روش گذر است</span><span class="t-en">When a planet crosses its star, the starlight dips slightly. The curve below is a teaching sketch of the transit method, not a real light curve.</span></p>
+<button class="more" data-panel="panel-exo" type="button"><span class="t-fa">شرح فراخورشیدی‌ها</span><span class="t-en">On exoplanets</span></button>
+</div>
+<img alt="طرح آموزشی گذر سیاره از برابر ستاره و افت نور آن" data-alt-en="Teaching diagram of a planetary transit and the dip in starlight" data-alt-fa="طرح آموزشی گذر سیاره از برابر ستاره و افت نور آن" height="460" loading="lazy" src="assets/icons/transit.svg" width="860"/>
+</article>
+</div>
+</div>
+</section>
+<section class="heritage on-light reveal" id="heritage">
+<div class="wrap">
+<div class="heritage-lead">
+<div>
+<p class="eyebrow"><span class="t-fa">۰۳ — میراث نجومی ایران</span><span class="t-en">03 — Iran’s Astronomical Heritage</span></p>
+<h2><span class="t-fa">سه نام، سه نوع دقت</span><span class="t-en">Three names, three kinds of rigor</span></h2>
+<p class="prose"><span class="t-fa">نجوم و ریاضیات در تاریخ علمی ایران جایگاهی روشن دارند. اینجا فقط به چند دستاورد شناخته‌شده اشاره می‌شود؛ نه نقل‌قول ساخته‌شده، نه افتخارِ بی‌منبع.</span><span class="t-en">Astronomy and mathematics hold a clear place in Iran’s scientific history. What follows names a few well-attested contributions — no invented quotations, no unearned glory.</span></p>
+</div>
+<figure class="frame">
+<img alt="برداشت هنری از مجموعه‌ای آجری با طاق رصدی در نور غروب" class="heritage-photo" data-alt-en="An artistic impression of a brick complex with an observing arc at dusk" data-alt-fa="برداشت هنری از مجموعه‌ای آجری با طاق رصدی در نور غروب" height="1067" loading="lazy" src="assets/images/heritage-observatory.jpg" width="1600"/>
+<figcaption><span class="t-fa">برداشت هنری از معماری رصد تاریخی</span><span class="t-en">An artistic impression of historical observing architecture — not a photograph of an institute building.</span></figcaption>
+</figure>
+</div>
+<div class="scholars">
+<article>
+<span class="idx">۱۰۴۸–۱۱۳۱</span>
+<h3><span class="t-fa">عمر خیام</span><span class="t-en">Omar Khayyam</span></h3>
+<p><span class="t-fa">ریاضی‌دان، اخترشناس و شاعر نیشابور (۱۰۴۸–۱۱۳۱ میلادی). در روزگار ملکشاه سلجوقی در اصلاح گاهشماری شرکت داشت. تقویم جلالی، که در ۱۰۷۹ میلادی بنیان گذاشته شد، از دقیق‌ترین تقویم‌های خورشیدی است. در رساله جبر، راه‌حل‌های هندسی معادلات درجه سوم را سامان داد.</span><span class="t-en">Mathematician, astronomer, and poet of Nishapur (1048–1131). He took part in the calendar reform under Sultan Malik-Shah. The Jalali calendar, established in 1079, is among the most accurate solar calendars ever devised. In his treatise on algebra he set out geometric solutions of cubic equations.</span></p>
+</article>
+<article class="scholar-side">
+<span class="idx">۹۷۳–حدود ۱۰۴۸</span>
+<h3><span class="t-fa">ابوریحان بیرونی</span><span class="t-en">Abu Rayhan al-Biruni</span></h3>
+<p><span class="t-fa">دانشمند خوارزم (۹۷۳ تا حدود ۱۰۴۸). در جغرافیای ریاضی، نجوم رصدی و اندازه‌گیری زمین کار کرد. التفهیم را برای آموزش مبادی نجوم نوشت و قانون مسعودی از جامع‌ترین آثار نجومی اوست. برآورد او از شعاع زمین، با سنجش افت افق از فراز کوه، از دقیق‌ترین کوشش‌های دوران خود است.</span><span class="t-en">A scholar of Khwarazm (973 to about 1048) who worked in mathematical geography, observational astronomy, and the measurement of the Earth. He wrote the Tafhim as an introduction to astronomy; the Qanun al-Masudi is his major astronomical compendium. His estimate of Earth’s radius, from the dip of the horizon seen from a mountain, ranks among the most careful of its age.</span></p>
+</article>
+<article class="scholar-side">
+<span class="idx">۱۲۰۱–۱۲۷۴</span>
+<h3><span class="t-fa">خواجه نصیرالدین طوسی</span><span class="t-en">Nasir al-Din al-Tusi</span></h3>
+<p><span class="t-fa">ریاضی‌دان و اخترشناس (۱۲۰۱–۱۲۷۴). رصدخانه مراغه حدود ۱۲۵۹ میلادی به سرپرستی او و با پشتیبانی هولاکو شکل گرفت و محل رصد و تدوین زیج ایلخانی شد. جفت طوسی دستگاهی هندسی است که از دو حرکت دایره‌ای، حرکت راست‌خط می‌سازد و بعدها در بحث مدل‌های سیاره‌ای مطرح شد.</span><span class="t-en">Mathematician and astronomer (1201–1274). The Maragheh observatory took shape around 1259 under his direction, with Hulagu’s patronage, and became a center for observation and for the Ilkhanid tables, the Zij-i Ilkhani. The Tusi couple is a geometric device that draws straight-line motion from two circular motions; it later entered discussions of planetary models.</span></p>
+</article>
+</div>
+<div class="pair">
+<figure class="frame">
+<img alt="اسطرلاب برنجی با شبکه هندسی، بر زمینه چوب تیره" class="astrolabe-img" data-alt-en="A brass astrolabe with geometric openwork on dark wood" data-alt-fa="اسطرلاب برنجی با شبکه هندسی، بر زمینه چوب تیره" height="1200" loading="lazy" src="assets/images/astrolabe.jpg" width="1600"/>
+<figcaption><span class="t-fa">اسطرلاب؛ ابزار ارتفاع، زمان و موقعیت.</span><span class="t-en">The astrolabe: altitude, time, and position. A studio photograph, not a named museum piece.</span></figcaption>
+</figure>
+<figure class="frame">
+<img alt="نقشه آسمان با خطوط طلایی صورت‌های فلکی، بدون نوشته" data-alt-en="A deep-blue star chart drawn in gold lines, without labels" data-alt-fa="نقشه آسمان با خطوط طلایی صورت‌های فلکی، بدون نوشته" height="1067" loading="lazy" src="assets/images/celestial-chart.jpg" width="1600"/>
+<figcaption><span class="t-fa">نقشه آسمان، آن‌گونه که هندسه جای نام‌ها را می‌گیرد. اثر هنری است.</span><span class="t-en">A star chart in which geometry stands in for names. An artwork, not a historical manuscript page.</span></figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section class="programs on-dark reveal" id="programs">
+<div class="wrap">
+<div class="programs-grid">
+<div>
+<p class="eyebrow"><span class="t-fa">۰۴ — برنامه‌های رصدی</span><span class="t-en">04 — Programs</span></p>
+<h2><span class="t-fa">تقویم نمونه</span><span class="t-en">A sample calendar, not a live one</span></h2>
+<p class="note"><span class="t-fa">این سه عنوان فقط برای نمایش شکل صفحه‌اند.</span><span class="t-en">These three entries show how a program list can read. They are not real events, open registrations, or a current schedule.</span></p>
+<div>
+<button class="program" data-panel="panel-pleiades" type="button">
+<span class="when"><span class="t-fa">۱۸ مهر ۱۴۰۳</span><span class="t-en">9 Oct 2024</span></span>
+<span>
+<span class="program-title"><span class="t-fa">شبی با خوشه پروین</span><span class="t-en">A night with the Pleiades</span></span>
+<span class="kind"><span class="t-fa">رصد عمومی · نمونه نمایشی</span><span class="t-en">Public observing · sample</span></span>
+</span>
+<span class="program-go"><span class="t-fa">جزئیات</span><span class="t-en">Details</span></span>
+</button>
+<button class="program" data-panel="panel-lab" type="button">
+<span class="when"><span class="t-fa">۲ آذر ۱۴۰۳</span><span class="t-en">22 Nov 2024</span></span>
+<span>
+<span class="program-title"><span class="t-fa">خواندن اسطرلاب</span><span class="t-en">Reading an astrolabe</span></span>
+<span class="kind"><span class="t-fa">کارگاه · نمونه نمایشی</span><span class="t-en">Workshop · sample</span></span>
+</span>
+<span class="program-go"><span class="t-fa">جزئیات</span><span class="t-en">Details</span></span>
+</button>
+<button class="program" data-panel="panel-talk" type="button">
+<span class="when"><span class="t-fa">۲۱ دی ۱۴۰۳</span><span class="t-en">10 Jan 2025</span></span>
+<span>
+<span class="program-title"><span class="t-fa">کیهان در حال انبساط</span><span class="t-en">The expanding universe</span></span>
+<span class="kind"><span class="t-fa">نشست علمی · نمونه نمایشی</span><span class="t-en">Talk · sample</span></span>
+</span>
+<span class="program-go"><span class="t-fa">جزئیات</span><span class="t-en">Details</span></span>
+</button>
+</div>
+</div>
+<figure class="frame">
+<img alt="داخل گنبد یک رصدخانه مدرن و تلسکوپ بزرگ، رو به آسمان شب" class="obs-photo" data-alt-en="Inside a modern observatory dome, a large telescope open to the night" data-alt-fa="داخل گنبد یک رصدخانه مدرن و تلسکوپ بزرگ، رو به آسمان شب" height="900" loading="lazy" src="assets/images/modern-observatory.jpg" width="1600"/>
+<figcaption><span class="t-fa">تصویر نمایشی از رصد معاصر</span><span class="t-en">A sample view of contemporary observing. This telescope does not belong to the institute.</span></figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section class="apod on-light reveal" id="apod">
+<div class="wrap-wide">
+<div class="apod-grid">
+<figure class="frame">
+<img alt="کهکشان مارپیچی با بازوهای غبارآلود و هسته گرم" data-alt-en="A spiral galaxy with dust lanes and a warm core" data-alt-fa="کهکشان مارپیچی با بازوهای غبارآلود و هسته گرم" height="1200" loading="lazy" src="assets/images/galaxy.jpg" width="1600"/>
+</figure>
+<div>
+<p class="kicker-sample"><span class="t-fa">نمونه تحریریه</span><span class="t-en">Editorial sample · not a live feed</span></p>
+<p class="eyebrow"><span class="t-fa">۰۵ — تصویر نجومی</span><span class="t-en">05 — Astronomical image</span></p>
+<h2><span class="t-fa">کهکشانی مارپیچی در نمای سه‌ربع</span><span class="t-en">A spiral galaxy, three-quarters on</span></h2>
+<p class="when-line"><span class="t-fa">تاریخ نمونه: ۱ فروردین ۱۴۰۳</span><span class="t-en">Sample date: 20 March 2024</span></p>
+<p class="prose"><span class="t-fa">در کهکشان‌های مارپیچی، بازوها جای زایش ستاره‌اند و خطوط غبار، نور را در طول‌موج‌های کوتاه‌تر بیشتر می‌گیرند. هسته اغلب پیرتر و زردتر دیده می‌شود.</span><span class="t-en">In a spiral galaxy the arms are where stars are forming, and dust lanes dim shorter wavelengths of light. The core often looks older and more golden. This frame is an artistic rendering made for the page — not a calibrated observatory plate, and not today’s image from a live service.</span></p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap-wide footer-grid">
+<div>
+<a class="brand" href="#top">
+<svg aria-hidden="true" class="mark" focusable="false" viewbox="0 0 64 64">
+<circle cx="32" cy="32" fill="none" r="26" stroke="currentColor" stroke-width="1.4"></circle>
+<rect fill="none" height="20" stroke="currentColor" stroke-width="1.3" width="20" x="22" y="22"></rect>
+<rect fill="none" height="20" stroke="currentColor" stroke-width="1.3" transform="rotate(45 32 32)" width="20" x="22" y="22"></rect>
+<circle cx="32" cy="32" fill="#35AFA5" r="2.1"></circle>
+</svg>
+<span>
+<span class="brand-name">
+<span class="t-fa">مؤسسه نجومی عمر خیام</span>
+<span class="t-en">Omar Khayyam Astronomical Institute</span>
+</span>
+</span>
+</a>
+<p class="prose"><span class="t-fa">فضایی خیالی برای روایت علم آسمان و میراث نجوم ایران.</span><span class="t-en">A fictional institute for the science of the sky and for Iran’s astronomical heritage.</span></p>
+</div>
+<nav aria-label="پاورقی" class="foot-nav" data-aria-en="Footer" data-aria-fa="پاورقی">
+<p class="foot-label"><span class="t-fa">بخش‌ها</span><span class="t-en">Sections</span></p>
+<a href="#intro"><span class="t-fa">معرفی</span><span class="t-en">Institute</span></a>
+<a href="#cosmos"><span class="t-fa">کاوش در کیهان</span><span class="t-en">The Cosmos</span></a>
+<a href="#heritage"><span class="t-fa">میراث</span><span class="t-en">Heritage</span></a>
+<a href="#programs"><span class="t-fa">برنامه‌های رصدی</span><span class="t-en">Programs</span></a>
+<a href="#apod"><span class="t-fa">تصویر نجومی</span><span class="t-en">Astronomical image</span></a>
+</nav>
+<div class="contact">
+<p class="foot-label"><span class="t-fa">ارتباط نمایشی</span><span class="t-en">Sample contact</span></p>
+<p><span class="t-fa">پست الکترونیکی نمونه</span><span class="t-en">Sample email</span><br/>contact@omar-khayyam-astro.example</p>
+<p><span class="t-fa">تلفن نمونه</span><span class="t-en">Sample phone</span><br/><span dir="ltr">+98 51 000 0000</span></p>
+<button aria-label="Switch language to English" class="lang-btn on-footer" data-aria-en="تغییر زبان به فارسی" data-aria-fa="Switch language to English" id="lang-toggle-footer" type="button">
+<span class="t-fa">English</span><span class="t-en">فارسی</span>
+</button>
+</div>
+</div>
+<p class="legal"><span class="t-fa">این وب‌سایت معرفی نمایشی یک مؤسسه خیالی است و به فعالیت، مجوز، نشانی یا برنامه واقعی اشاره ندارد. طراحی شده توسط ابراهیم کمالیان</span><span class="t-en">This website is a fictional presentation. It does not describe a real activity, licence, address, or program.</span></p>
+</footer>
+<dialog class="sheet" id="sheet">
+<div class="sheet-top">
+<form method="dialog"><button class="text-btn" type="submit"><span class="t-fa">بستن</span><span class="t-en">Close</span></button></form>
+</div>
+<article class="panel" hidden="" id="panel-solar">
+<h3 id="h-solar"><span class="t-fa">منظومه شمسی</span><span class="t-en">The Solar System</span></h3>
+<p><span class="t-fa">منظومه شمسی یک ستاره و اجرام در گردش آن است: هشت سیاره، سیاره‌های کوتوله، قمرها، سیارک‌ها، دنباله‌دارها و غبار. عطارد، زهره، زمین و مریخ سنگی‌اند. مشتری و زحل غول‌های گازی‌اند و اورانوس و نپتون را غول‌های یخی می‌نامند. این سامانه آزمایشگاه نزدیک سیاره‌شناسی است و مقیاس فهم جهان‌های دورتر.</span><span class="t-en">The Solar System is a star and the bodies that orbit it: eight planets, dwarf planets, moons, asteroids, comets, and dust. Mercury, Venus, Earth, and Mars are rocky. Jupiter and Saturn are gas giants; Uranus and Neptune are called ice giants. It is the nearest laboratory for planetary science, and a scale against which more distant worlds are read.</span></p>
+</article>
+<article class="panel" hidden="" id="panel-stars">
+<h3 id="h-stars"><span class="t-fa">ستارگان و کهکشان‌ها</span><span class="t-en">Stars and galaxies</span></h3>
+<p><span class="t-fa">ستاره‌ها از رمبش ابرهای گاز و غبار زاده می‌شوند و با همجوشی هسته‌ای می‌درخشند. جرم، مسیر زندگی ستاره را تعیین می‌کند: از کوتوله‌های سرخِ پایدار تا ستاره‌های پرجرمی که به ابرنواختر می‌رسند. کهکشان راه شیری صدها میلیارد ستاره دارد و خود یکی از کهکشان‌های گروه محلی است.</span><span class="t-en">Stars form when clouds of gas and dust collapse, and they shine by nuclear fusion. Mass sets the life of a star, from long-lived red dwarfs to massive stars that end in supernovae. The Milky Way holds hundreds of billions of stars and is itself one galaxy of the Local Group.</span></p>
+</article>
+<article class="panel" hidden="" id="panel-hole">
+<h3 id="h-hole"><span class="t-fa">سیاه‌چاله‌ها</span><span class="t-en">Black holes</span></h3>
+<p><span class="t-fa">سیاه‌چاله ناحیه‌ای است که جرم چنان فشرده شده که سرعت گریز از افق رویداد از سرعت نور بیشتر است. سیاه‌چاله‌های ستاره‌ای از رمبش ستاره‌های پرجرم می‌آیند. سیاه‌چاله‌ای ابرپرجرم در مرکز راه شیری است. تصویربرداری رادیویی از سایه سیاه‌چاله در کهکشان M87 و در مرکز راه شیری، این اجرام را از مدل صرف به تصویر رصدی نزدیک کرده است.</span><span class="t-en">A black hole is a region where mass is so compact that the escape speed at the event horizon exceeds the speed of light. Stellar-mass black holes form in the collapse of massive stars. A supermassive black hole sits at the centre of the Milky Way. Radio images of the shadow in M87 and of the Milky Way’s own centre have brought these objects from pure model to observation.</span></p>
+</article>
+<article class="panel" hidden="" id="panel-cosmos">
+<h3 id="h-cosmos"><span class="t-fa">کیهان‌شناسی</span><span class="t-en">Cosmology</span></h3>
+<p><span class="t-fa">کیهان‌شناسی می‌پرسد جهان در بزرگ‌ترین مقیاس چگونه است و چگونه تغییر می‌کند. مشاهده‌ها نشان می‌دهد فضا منبسط می‌شود. تابش زمینه کیهانی، نور بازمانده از دوران داغ و چگال آغازین، یکی از دقیق‌ترین شواهد این تصویر است. در مقیاس بزرگ، کهکشان‌ها روی رشته‌هایی از ماده قرار دارند که شبکه کیهانی نام گرفته است. برای توضیح شتاب انبساط، مدل استاندارد مؤلفه‌ای به نام انرژی تاریک را وارد می‌کند؛ ماهیت آن هنوز محل پژوهش است.</span><span class="t-en">Cosmology asks what the universe is like at the largest scale, and how it changes. Observations show that space is expanding. The cosmic microwave background — light left from an early hot, dense phase — is among the sharpest evidence for that picture. On the largest scales, galaxies lie along filaments of matter known as the cosmic web. To account for accelerated expansion, the standard model includes a component called dark energy; what it is remains an open research question.</span></p>
+</article>
+<article class="panel" hidden="" id="panel-exo">
+<h3 id="h-exo"><span class="t-fa">سیارات فراخورشیدی</span><span class="t-en">Exoplanets</span></h3>
+<p><span class="t-fa">سیاره فراخورشیدی به دور ستاره‌ای جز خورشید می‌گردد. هزاران نمونه تأیید شده‌اند. در روش گذر، سیاره از مقابل ستاره می‌گذرد و نور آن را کم می‌کند؛ شکل این افت، درباره اندازه و مدار چیزی می‌گوید. روش سرعت شعاعی، لنگش گرانشی ستاره را می‌سنجد. زیست‌پذیری — امکان آب مایع در سطح — پرسشی محدود و دقیق است و با یک تصویر هنری ثابت نمی‌شود.</span><span class="t-en">An exoplanet orbits a star other than the Sun. Thousands have been confirmed. In the transit method the planet crosses its star and dims it; the shape of that dip says something about size and orbit. The radial-velocity method measures the star’s gravitational wobble. Habitability — the possibility of liquid water on a surface — is a narrow, careful question. An artist’s image does not settle it.</span></p>
+</article>
+<article class="panel" hidden="" id="panel-pleiades">
+<h3><span class="t-fa">شبی با خوشه پروین</span><span class="t-en">A night with the Pleiades</span></h3>
+<p class="meta"><span class="t-fa">۱۸ مهر ۱۴۰۳ · رصد عمومی · نمونه نمایشی</span><span class="t-en">9 October 2024 · public observing · sample</span></p>
+<p><span class="t-fa">خوشه باز پروین در صورت فلکی ثور، با چشم غیرمسلح هم دیده می‌شود. در این برنامه نمونه، قرار بود حضار جایگاه آن را نسبت به ستاره‌های اطراف پیدا کنند و سپس از پشت یک تلسکوپ کوچک به ستاره‌های داغ و آبی خوشه نگاه کنند. چنین برنامه‌ای برگزار نشده است.</span><span class="t-en">The Pleiades, an open cluster in Taurus, are visible to the unaided eye. In this sample program, visitors would have found the cluster among the surrounding stars and then looked at its hot blue members through a small telescope. No such event was held.</span></p>
+</article>
+<article class="panel" hidden="" id="panel-lab">
+<h3><span class="t-fa">خواندن اسطرلاب</span><span class="t-en">Reading an astrolabe</span></h3>
+<p class="meta"><span class="t-fa">۲ آذر ۱۴۰۳ · کارگاه · نمونه نمایشی</span><span class="t-en">22 November 2024 · workshop · sample</span></p>
+<p><span class="t-fa">کارگاه نمونه، اجزای اسطرلاب مسطح را معرفی می‌کرد: عنکبوت، صفیحه، ام و عضاده، و نسبت آن‌ها با ارتفاع و زمان. این متن فقط شکل یک معرفی آموزشی است.</span><span class="t-en">The sample workshop would have named the parts of a planispheric astrolabe — the rete, the plate, the mater, and the alidade — and how they relate to altitude and time. This text only shows the shape of such an introduction.</span></p>
+</article>
+<article class="panel" hidden="" id="panel-talk">
+<h3><span class="t-fa">کیهان در حال انبساط</span><span class="t-en">The expanding universe</span></h3>
+<p class="meta"><span class="t-fa">۲۱ دی ۱۴۰۳ · نشست · نمونه نمایشی</span><span class="t-en">10 January 2025 · talk · sample</span></p>
+<p><span class="t-fa">نشست نمونه برای مخاطب غیرمتخصص طراحی شده بود: انبساط فضا، نه انفجار در یک مرکز، و تابش زمینه به عنوان شاهد. این نشست برگزار نشده است.</span><span class="t-en">The sample talk was framed for a non-specialist listener: space expands, it is not an explosion from a centre, and the microwave background is evidence. The talk did not take place.</span></p>
+</article>
+</dialog>
+<dialog aria-labelledby="join-title" class="sheet" id="join-dialog">
+<div class="sheet-top">
+<form method="dialog"><button class="text-btn" type="submit"><span class="t-fa">بستن</span><span class="t-en">Close</span></button></form>
+</div>
+<h3 id="join-title"><span class="t-fa">عضویت نمایشی</span><span class="t-en">Sample membership</span></h3>
+<p><span class="t-fa">این فرم ارسال نمی‌شود و هیچ نام یا نشانی ذخیره نمی‌گردد. فقط شکل یک دعوت را نشان می‌دهد.</span><span class="t-en">This form is not sent, and no name or address is stored. It only shows the shape of an invitation.</span></p>
+<form id="join-form" novalidate="">
+<div class="fields">
+<label>
+<span class="t-fa">نام</span><span class="t-en">Name</span>
+<input autocomplete="name" name="name" required="" type="text"/>
+</label>
+<label>
+<span class="t-fa">پست الکترونیکی</span><span class="t-en">Email</span>
+<input autocomplete="email" inputmode="email" name="email" required="" type="email"/>
+</label>
+<label>
+<span class="t-fa">علاقه</span><span class="t-en">Interest</span>
+<select name="interest">
+<option data-en="Sky observing" data-fa="رصد آسمان" value="obs">رصد آسمان</option>
+<option data-en="Learning astronomy" data-fa="آموزش نجوم" value="learn">آموزش نجوم</option>
+<option data-en="History of astronomy" data-fa="تاریخ نجوم" value="past">تاریخ نجوم</option>
+</select>
+</label>
+</div>
+<p class="form-error" hidden="" id="join-error"><span class="t-fa">نام و یک پست الکترونیکی معتبر لازم است.</span><span class="t-en">A name and a valid email are required.</span></p>
+<div class="hero-actions">
+<button class="btn btn-ink" type="submit"><span class="t-fa">ثبت نمایشی</span><span class="t-en">Submit sample</span></button>
+</div>
+</form>
+<p class="done" hidden="" id="join-done" role="status"><span class="t-fa">چیزی فرستاده نشد. این فقط تأیید نمایشی است.</span><span class="t-en">Nothing was sent. This is only a sample confirmation.</span></p>
+</dialog>
+<script>
+    (function () {
+      var root = document.documentElement;
+      var header = document.getElementById("site-header");
+      var nav = document.getElementById("site-nav");
+      var menuBtn = document.getElementById("menu-btn");
+      var sheet = document.getElementById("sheet");
+      var joinDialog = document.getElementById("join-dialog");
+      var joinForm = document.getElementById("join-form");
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function apply(lang) {
+        var en = lang === "en";
+        root.lang = en ? "en" : "fa";
+        root.dir = en ? "ltr" : "rtl";
+        document.title = en ? "Omar Khayyam Astronomical Institute" : "مؤسسه نجومی عمر خیام";
+        var desc = document.querySelector('meta[name="description"]');
+        if (desc) {
+          desc.setAttribute("content", en
+            ? "Omar Khayyam Astronomical Institute — a bilingual exhibition of the sky and Iran’s astronomical heritage. A fictional institute; sample content only."
+            : "مؤسسه نجومی عمر خیام؛ آشنایی با آسمان، میراث نجوم ایران و پرسش‌های کیهان. این صفحه معرفی نمایشی یک مؤسسه خیالی است.");
+        }
+        document.querySelectorAll("[data-alt-fa]").forEach(function (img) {
+          img.alt = en ? img.getAttribute("data-alt-en") : img.getAttribute("data-alt-fa");
+        });
+        document.querySelectorAll("[data-aria-fa]").forEach(function (el) {
+          el.setAttribute("aria-label", en ? el.getAttribute("data-aria-en") : el.getAttribute("data-aria-fa"));
+        });
+        document.querySelectorAll("option[data-fa]").forEach(function (op) {
+          op.textContent = en ? op.getAttribute("data-en") : op.getAttribute("data-fa");
+        });
+        var pressed = en ? "true" : "false";
+        var t1 = document.getElementById("lang-toggle");
+        var t2 = document.getElementById("lang-toggle-footer");
+        if (t1) t1.setAttribute("aria-pressed", pressed);
+        if (t2) t2.setAttribute("aria-pressed", pressed);
+        try { localStorage.setItem("okai-lang", en ? "en" : "fa"); } catch (e) {}
+      }
+
+      function toggleLang() { apply(root.lang === "fa" ? "en" : "fa"); }
+      document.getElementById("lang-toggle").addEventListener("click", toggleLang);
+      document.getElementById("lang-toggle-footer").addEventListener("click", toggleLang);
+
+      function onScroll() { header.classList.toggle("is-scrolled", window.scrollY > 20); }
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+
+      function setMenu(open) {
+        nav.classList.toggle("is-open", open);
+        header.classList.toggle("is-open", open);
+        menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+        document.body.classList.toggle("nav-lock", open);
+        var label = open
+          ? (root.lang === "en" ? "Close menu" : "بستن منو")
+          : (root.lang === "en" ? "Open menu" : "باز کردن منو");
+        menuBtn.setAttribute("aria-label", label);
+      }
+      menuBtn.addEventListener("click", function () { setMenu(!nav.classList.contains("is-open")); });
+      nav.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { setMenu(false); }); });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && nav.classList.contains("is-open")) setMenu(false);
+      });
+
+      function openPanel(id) {
+        sheet.querySelectorAll(".panel").forEach(function (p) { p.hidden = true; });
+        var panel = document.getElementById(id);
+        if (!panel) return;
+        panel.hidden = false;
+        var heading = panel.querySelector("h3");
+        if (heading) {
+          if (!heading.id) heading.id = id + "-title";
+          sheet.setAttribute("aria-labelledby", heading.id);
+        }
+        sheet.showModal();
+      }
+      document.querySelectorAll(".topic").forEach(function (topic) {
+        var btn = topic.querySelector("[data-panel]");
+        if (!btn) return;
+        topic.addEventListener("click", function (e) {
+          if (e.target.closest("button")) return;
+          btn.click();
+        });
+      });
+      document.querySelectorAll("[data-panel]").forEach(function (btn) {
+        btn.addEventListener("click", function () { openPanel(btn.getAttribute("data-panel")); });
+      });
+
+      document.getElementById("open-join").addEventListener("click", function () { joinDialog.showModal(); });
+      joinForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var name = joinForm.querySelector('[name="name"]').value.trim();
+        var email = joinForm.querySelector('[name="email"]').value.trim();
+        var ok = name.length > 1 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        document.getElementById("join-error").hidden = ok;
+        if (!ok) return;
+        joinForm.reset();
+        joinForm.hidden = true;
+        document.getElementById("join-done").hidden = false;
+      });
+      joinDialog.addEventListener("close", function () {
+        joinForm.hidden = false;
+        joinForm.reset();
+        document.getElementById("join-done").hidden = true;
+        document.getElementById("join-error").hidden = true;
+      });
+
+      var nodes = document.querySelectorAll(".reveal");
+      if (reduce || !("IntersectionObserver" in window)) {
+        nodes.forEach(function (n) { n.classList.add("in"); });
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in");
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        nodes.forEach(function (n) { io.observe(n); });
+        setTimeout(function () { nodes.forEach(function (n) { n.classList.add("in"); }); }, 1600);
+      }
+
+      apply(root.lang === "en" ? "en" : "fa");
+    })();
+  </script>
+
+<script>
+/* دکمه بازگشت با موس یا لمس قابل جابه‌جایی است. کلیک معمولی همچنان به WEBDEK برمی‌گردد. */
+(function () {
+  var button = document.querySelector('.webdek-float-back');
+  if (!button) return;
+  var dragging = false, moved = false;
+  var startX = 0, startY = 0, offsetX = 0, offsetY = 0;
+  var pointerId = null;
+  function clamp(value, min, max) { return Math.min(Math.max(value, min), max); }
+
+  button.addEventListener('dragstart', function (event) { event.preventDefault(); });
+  button.addEventListener('pointerdown', function (event) {
+    if (event.pointerType === 'mouse' && event.button !== 0) return;
+    var rect = button.getBoundingClientRect();
+    dragging = true; moved = false; pointerId = event.pointerId;
+    startX = event.clientX; startY = event.clientY;
+    offsetX = event.clientX - rect.left; offsetY = event.clientY - rect.top;
+    button.style.transform = 'none';
+    button.style.left = rect.left + 'px';
+    button.style.top = rect.top + 'px';
+    button.style.right = 'auto';
+    try { button.setPointerCapture(pointerId); } catch (e) {}
+  });
+  button.addEventListener('pointermove', function (event) {
+    if (!dragging || event.pointerId !== pointerId) return;
+    var dx = event.clientX - startX, dy = event.clientY - startY;
+    if (Math.abs(dx) > 4 || Math.abs(dy) > 4) moved = true;
+    if (!moved) return;
+    var rect = button.getBoundingClientRect();
+    button.style.left = clamp(event.clientX - offsetX, 0, window.innerWidth - rect.width) + 'px';
+    button.style.top = clamp(event.clientY - offsetY, 0, window.innerHeight - rect.height) + 'px';
+  });
+  function stopDragging(event) {
+    if (!dragging || (event && event.pointerId !== pointerId)) return;
+    dragging = false;
+    if (moved) button.dataset.justDragged = 'true';
+    pointerId = null;
+  }
+  button.addEventListener('pointerup', stopDragging);
+  button.addEventListener('pointercancel', stopDragging);
+  button.addEventListener('click', function (event) {
+    if (button.dataset.justDragged === 'true') {
+      event.preventDefault();
+      event.stopPropagation();
+      delete button.dataset.justDragged;
+    }
+  });
+  window.addEventListener('resize', function () {
+    if (!button.style.left || !button.style.top || button.style.transform !== 'none') return;
+    var rect = button.getBoundingClientRect();
+    button.style.left = clamp(rect.left, 0, window.innerWidth - rect.width) + 'px';
+    button.style.top = clamp(rect.top, 0, window.innerHeight - rect.height) + 'px';
+  });
+})();
+</script>
+
+</body>
+</html>
