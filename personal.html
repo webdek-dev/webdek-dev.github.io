@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#090d19" name="theme-color"/>
+<title>حسین حسنی | طراح وب و توسعه‌دهنده اپلیکیشن</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#090d19;--panel:#11182a;--text:#f4f6ff;--muted:#a5afc5;--line:rgba(255,255,255,.1);--cyan:#63e6e2;--violet:#a89bff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Vazirmatn",Tahoma,sans-serif;line-height:1.9;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 12% 12%,rgba(99,230,226,.12),transparent 35%),radial-gradient(ellipse at 88% 35%,rgba(168,155,255,.14),transparent 32%),linear-gradient(135deg,#090d19,#0b1020 60%,#0c1222)}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1100px,calc(100% - 36px));margin:auto}
+nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{font-size:1.15rem;font-weight:800;letter-spacing:-.5px}.brand span{color:var(--cyan)}
+.navlinks{display:flex;gap:24px;color:var(--muted);font-size:.9rem}.navlinks a:hover{color:var(--cyan)}
+.hero{min-height:570px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:50px;padding:75px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--cyan);font-size:.85rem;border:1px solid rgba(99,230,226,.25);padding:5px 13px;border-radius:100px;background:rgba(99,230,226,.06)}
+.dot{width:7px;height:7px;background:var(--cyan);border-radius:50%;box-shadow:0 0 14px var(--cyan)}
+h1{font-size:clamp(2.5rem,6vw,4.6rem);line-height:1.25;letter-spacing:-2px;margin:22px 0 16px}h1 span{background:linear-gradient(100deg,var(--cyan),var(--violet));background-clip:text;-webkit-background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:1.08rem;max-width:590px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:11px 22px;border-radius:12px;font-weight:600;border:1px solid var(--line);transition:.25s}
+.btn.primary{background:var(--cyan);color:#07111a;border-color:var(--cyan)}.btn:hover{transform:translateY(-3px)}
+.visual{position:relative;min-height:330px;display:grid;place-items:center}
+.orbit{width:min(320px,75vw);aspect-ratio:1;border:1px solid rgba(168,155,255,.32);border-radius:50%;display:grid;place-items:center;position:relative;box-shadow:0 0 90px rgba(99,230,226,.08),inset 0 0 60px rgba(168,155,255,.06)}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(99,230,226,.22);border-radius:50%;inset:26px;transform:rotate(35deg) scaleX(.65)}
+.orbit:after{inset:55px;transform:rotate(-35deg) scaleX(.65);border-color:rgba(168,155,255,.35)}
+.codebox{z-index:1;width:76%;padding:22px;border:1px solid rgba(255,255,255,.14);border-radius:18px;background:rgba(15,22,39,.88);box-shadow:0 20px 70px #0005;direction:ltr;text-align:left;font: .86rem/2 monospace;color:#d7def5}
+.codebox .c1{color:var(--violet)}.codebox .c2{color:var(--cyan)}.codebox .c3{color:#e7c98b}
+.float{position:absolute;border:1px solid var(--line);border-radius:12px;background:#121a2c;padding:10px 14px;color:var(--muted);font-size:.8rem}.f1{top:14%;right:0}.f2{bottom:12%;left:0}
+.section{padding:70px 0;border-top:1px solid var(--line)}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}.section h2{font-size:clamp(1.6rem,3vw,2.2rem);margin:0}.section-head p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{padding:24px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:rgba(99,230,226,.4)}
+.icon{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:rgba(99,230,226,.09);color:var(--cyan);font-size:1.2rem;margin-bottom:16px}
+.card h3{margin:0 0 7px;font-size:1.08rem}.card p{margin:0;color:var(--muted);font-size:.92rem}
+.marquee{overflow:hidden;border:1px solid var(--line);border-radius:16px;padding:16px 0;background:rgba(255,255,255,.025);white-space:nowrap;color:#c6cde0}
+.marquee span{display:inline-block;padding:0 24px}.marquee b{color:var(--cyan);font-weight:500}
+.contact{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:200px;border-radius:22px;border:1px solid rgba(99,230,226,.22);background:linear-gradient(120deg,rgba(99,230,226,.08),rgba(168,155,255,.08))}
+.contact h2{margin:0 0 8px}.contact p{margin:0;color:var(--muted)}
+footer{padding:25px 0;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:15px}
+@media(max-width:760px){.navlinks{gap:12px;font-size:.8rem}.hero{grid-template-columns:1fr;padding:55px 0 35px;gap:10px}.visual{min-height:290px;grid-row:1}.orbit{width:255px}.hero-copy{text-align:center}.lead{margin-inline:auto}.actions{justify-content:center}.cards{grid-template-columns:1fr}.section{padding:50px 0}.section-head{display:block}.section-head p{margin-top:8px}.contact{align-items:flex-start;flex-direction:column}footer{flex-direction:column;gap:4px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+<style>
+.webdek-back{position:fixed;z-index:1000;top:16px;left:16px;display:inline-flex;align-items:center;justify-content:center;padding:10px 18px;border:1px solid #d8f078;border-radius:999px;background:#214b3b;color:#fff;text-decoration:none;font-family:Vazirmatn,Tahoma,sans-serif;font-size:.85rem;font-weight:700;box-shadow:0 8px 26px rgba(0,0,0,.2);transition:transform .2s,background .2s}
+.webdek-back:hover{background:#17392d;transform:translateY(-2px)}
+.extra-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.extra-card{padding:24px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015))}
+.extra-card h3{margin:0 0 8px;font-size:1.08rem}.extra-card p{margin:0;color:var(--muted);font-size:.92rem}
+.process-list{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:step}
+.process-item{padding:22px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}
+.process-item b{display:block;color:var(--cyan);font:700 1.4rem monospace;margin-bottom:8px}
+.process-item h3{font-size:1rem;margin:0 0 7px}.process-item p{font-size:.88rem;color:var(--muted);margin:0}
+@media(max-width:760px){.extra-grid{grid-template-columns:1fr}.process-list{grid-template-columns:1fr 1fr}.navlinks{gap:8px;font-size:.72rem} .webdek-back{top:8px;left:8px;padding:8px 11px;font-size:.72rem}}
+@media(max-width:420px){.process-list{grid-template-columns:1fr}.navlinks{gap:6px}}
+</style></head>
+<body><a class="webdek-back" href="index.html">← بازگشت به WEBDEK</a>
+<header class="wrap">
+<nav>
+<a class="brand" href="#home">EK<span>.</span></a>
+<div class="navlinks"><a href="#about">درباره من</a><a href="#services">خدمات</a><a href="#skills">مهارت‌ها</a><a href="#process">فرآیند کار</a><a href="#contact">ارتباط</a></div>
+</nav>
+</header>
+<main>
+<section class="wrap hero" id="home">
+<div class="hero-copy">
+<div class="eyebrow"><span class="dot"></span> طراحی وب‌سایت · توسعه اپلیکیشن · برنامه‌نویسی</div>
+<h1>سلام، من<br/><span>حسین حسنی</span> هستم.</h1>
+<p class="lead">من حسین حسنی هستم؛ طراح وب‌سایت و توسعه‌دهنده نرم‌افزار با تمرکز بر ساخت تجربه‌های دیجیتال حرفه‌ای. از طراحی رابط کاربری و وب‌سایت‌های واکنش‌گرا تا طراحی معماری اپلیکیشن و پیاده‌سازی قابلیت‌های کاربردی، تلاش می‌کنم ایده‌ها را به محصولاتی دقیق، سریع و قابل استفاده تبدیل کنم.</p>
+<div class="actions"><a class="btn primary" href="#services">مشاهده خدمات</a><a class="btn" href="#skills">مهارت‌های فنی</a><a class="btn" href="#contact">شروع یک گفتگو ↙</a></div>
+</div>
+<div aria-hidden="true" class="visual">
+<div class="orbit"><div class="codebox"><div><span class="c1">const</span> creator = {</div><div>  name: <span class="c3">'Hossein Hasani'</span>,</div><div>  focus: <span class="c2">'Web &amp; App Development'</span>,</div><div>  builds: <span class="c3">'digital products'</span></div><div>}; <span class="c1">↗</span></div></div></div>
+<div class="float f1">✳ طراحی خلاقانه</div><div class="float f2"> &lt;/&gt; کدنویسی تمیز</div>
+</div>
+</section>
+<section class="section" id="about"><div class="wrap">
+<div class="section-head"><h2>ترکیب منطق و خلاقیت</h2><p>از ایده‌پردازی تا اجرای وب‌سایت</p></div>
+<div class="cards">
+<article class="card"><div class="icon">⌘</div><h3>سادگی هدفمند</h3><p>طراحی روشن و مرتب، بدون شلوغی‌های غیرضروری.</p></article>
+<article class="card"><div class="icon">◈</div><h3>توجه به جزئیات</h3><p>رنگ، فونت، فاصله‌ها و تجربه کاربری در کنار هم.</p></article>
+<article class="card"><div class="icon">↗</div><h3>طراحی واکنش‌گرا</h3><p>چیدمانی سازگار با صفحه‌نمایش موبایل و رایانه.</p></article>
+</div>
+</div></section>
+<section class="section" id="services"><div class="wrap">
+<div class="section-head"><h2>خدمات تخصصی</h2><p>از تجربه کاربری تا منطق پشت محصول</p></div>
+<div class="extra-grid">
+<article class="extra-card"><div class="icon">⌘</div><h3>طراحی وب‌سایت حرفه‌ای</h3><p>طراحی وب‌سایت‌های شرکتی، شخصی و معرفی خدمات با ساختار روشن، ظاهر اختصاصی و نمایش درست در موبایل، تبلت و رایانه.</p></article>
+<article class="extra-card"><div class="icon">▣</div><h3>توسعه اپلیکیشن</h3><p>طراحی و پیاده‌سازی اپلیکیشن‌های کاربردی با توجه به نیاز پروژه، مسیرهای اصلی کاربر، عملکرد و قابلیت توسعه در آینده.</p></article>
+<article class="extra-card"><div class="icon">&lt;/&gt;</div><h3>برنامه‌نویسی و پیاده‌سازی</h3><p>تبدیل نیازمندی‌ها به اجزای قابل اجرا، سازمان‌دهی کد، رفع خطا و ایجاد ساختاری که نگهداری و گسترش آن ساده‌تر باشد.</p></article>
+<article class="extra-card"><div class="icon">◈</div><h3>رابط کاربری و تجربه کاربری</h3><p>چیدمان محتوا، طراحی مسیرهای ساده و توجه به خوانایی، دسترس‌پذیری و جزئیات تعاملی.</p></article>
+<article class="extra-card"><div class="icon">↗</div><h3>بهینه‌سازی و بازطراحی</h3><p>بهبود ساختار و ظاهر وب‌سایت‌های موجود، مرتب‌سازی محتوا و اصلاح تجربه استفاده در نمایشگرهای مختلف.</p></article>
+<article class="extra-card"><div class="icon">⚙</div><h3>حل مسئله فنی</h3><p>بررسی مسئله، تقسیم آن به بخش‌های کوچک‌تر و انتخاب راه‌حل متناسب با محدودیت‌ها و هدف محصول.</p></article>
+</div></div></section>
+<section class="section" id="process"><div class="wrap">
+<div class="section-head"><h2>فرآیند انجام پروژه</h2><p>شفاف، مرحله‌به‌مرحله و متناسب با نیاز واقعی</p></div>
+<div class="process-list">
+<article class="process-item"><b>01</b><h3>شناخت نیاز</h3><p>هدف، مخاطبان، امکانات لازم و محدودیت‌های پروژه مشخص می‌شوند.</p></article>
+<article class="process-item"><b>02</b><h3>طراحی ساختار</h3><p>صفحات، مسیرهای کاربر و اولویت‌های محتوایی برنامه‌ریزی می‌شوند.</p></article>
+<article class="process-item"><b>03</b><h3>توسعه و آزمون</h3><p>طرح پیاده‌سازی و روی اندازه‌های مختلف صفحه بررسی می‌شود.</p></article>
+<article class="process-item"><b>04</b><h3>تحویل و بهبود</h3><p>نسخه نهایی تحویل داده می‌شود و اصلاحات توافق‌شده انجام می‌گیرند.</p></article>
+</div></div></section>
+<section class="section" id="approach"><div class="wrap">
+<div class="section-head"><h2>نگاه من به ساخت محصول دیجیتال</h2><p>فقط ظاهر زیبا کافی نیست</p></div>
+<div class="cards">
+<article class="card"><div class="icon">◎</div><h3>کاربر در مرکز تصمیم‌ها</h3><p>هر قابلیت باید دلیل مشخصی داشته باشد و استفاده از محصول را ساده‌تر کند.</p></article>
+<article class="card"><div class="icon">⌁</div><h3>ساختار قابل توسعه</h3><p>کد و اجزای پروژه تا حد امکان منظم طراحی می‌شوند تا تغییرات آینده دشوار نباشند.</p></article>
+<article class="card"><div class="icon">✓</div><h3>کیفیت در جزئیات</h3><p>سرعت، واکنش‌گرایی، خوانایی و رفتار درست دکمه‌ها بخشی از کیفیت نهایی هستند.</p></article>
+</div></div></section>
+
+<section class="section" id="skills"><div class="wrap">
+<div class="section-head"><h2>حوزه‌های فعالیت</h2><p>فناوری، طراحی و راه‌حل‌های دیجیتال</p></div>
+<div class="marquee"><span><b>✦</b> طراحی وب‌سایت</span><span><b>✦</b> توسعه اپلیکیشن</span><span><b>✦</b> HTML و CSS</span><span><b>✦</b> رابط کاربری</span><span><b>✦</b> توسعه فرانت‌اند</span><span><b>✦</b> طراحی واکنش‌گرا</span><span><b>✦</b> رفع خطا و بهینه‌سازی</span><span><b>✦</b> تبدیل ایده به محصول</span></div>
+</div></section>
+<section class="section" id="contact"><div class="wrap">
+<div class="contact"><div><h2>برای ساخت یک محصول دیجیتال آماده‌اید؟</h2><p>درباره وب‌سایت، اپلیکیشن یا ایده نرم‌افزاری‌تان صحبت کنیم.</p></div><a class="btn primary" href="mailto:YOUR-EMAIL@example.com">ارتباط با من ↗</a></div>
+</div></section>
+</main>
+<footer class="wrap"><span>© حسین حسنی</span><span>طراحی‌شده با دقت و کنجکاوی.</span></footer>
+</body>
+</html>
