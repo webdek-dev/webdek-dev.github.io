@@ -1,0 +1,1022 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f2">
+  <meta name="description" content="WEBDEK؛ تیم طراحی وب‌سایت برای کسب‌وکارها و مجموعه‌های مختلف. طراحی اختصاصی، تجربه کاربری مناسب و حضوری حرفه‌ای در فضای دیجیتال.">
+  <meta name="author" content="WEBDEK">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="WEBDEK | طراحی حرفه‌ای وب‌سایت">
+  <meta property="og:description" content="وب‌سایتی سبک، خوش‌ساخت و هماهنگ با هویت شما.">
+  <title>WEBDEK | تیم طراحی وب‌سایت</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f7f2;
+      --surface: #ffffff;
+      --surface-soft: #edf1e9;
+      --ink: #17261f;
+      --ink-soft: #34463c;
+      --muted: #718078;
+      --line: #e2e8df;
+      --green: #174b3d;
+      --green-deep: #10372e;
+      --green-light: #dcebdc;
+      --lime: #d8ef83;
+      --lime-deep: #bedc5c;
+      --blue: #e4edf1;
+      --peach: #f5e6d9;
+      --lavender: #e9e7f5;
+      --radius: 26px;
+      --shadow: 0 24px 70px rgba(20, 48, 37, .09);
+      --shadow-soft: 0 12px 35px rgba(20, 48, 37, .06);
+      --container: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    body.menu-open, body.lightbox-open { overflow: hidden; }
+    img { max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { font: inherit; }
+    ::selection { color: var(--green-deep); background: var(--lime); }
+    .container { width: min(var(--container), calc(100% - 48px)); margin-inline: auto; }
+    .section { padding: 104px 0; }
+    .section-white { background: var(--surface); }
+    .section-soft { background: #eef2eb; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 42px; }
+    .section-head-copy { max-width: 650px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      margin: 0 0 13px; color: #728d4e; font-size: 12px; font-weight: 800;
+      letter-spacing: .3px;
+    }
+    .eyebrow::before { content: ""; width: 22px; height: 2px; border-radius: 5px; background: var(--lime-deep); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { line-height: 1.55; }
+    h1 { margin-bottom: 20px; font-size: clamp(40px, 5.5vw, 70px); line-height: 1.32; letter-spacing: -2.8px; font-weight: 900; }
+    h2 { margin-bottom: 12px; font-size: clamp(29px, 3.5vw, 43px); letter-spacing: -1.3px; font-weight: 850; }
+    h3 { font-weight: 800; }
+    .section-lead { max-width: 520px; margin: 0; color: var(--muted); font-size: 14px; line-height: 2.2; }
+    .text-highlight { position: relative; z-index: 0; white-space: nowrap; }
+    .text-highlight::after {
+      content: ""; position: absolute; z-index: -1; right: -4px; left: -4px; bottom: 5px;
+      height: 13px; border-radius: 4px; background: var(--lime); transform: rotate(-1.5deg);
+    }
+    .btn {
+      min-height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 11px;
+      padding: 12px 21px; border: 1px solid transparent; border-radius: 999px;
+      font-size: 13px; font-weight: 750; transition: transform .22s ease, background .22s ease, border-color .22s ease, box-shadow .22s ease;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-3px); }
+    .btn-primary { color: #fff; background: var(--green); box-shadow: 0 10px 24px rgba(23,75,61,.16); }
+    .btn-primary:hover { background: var(--green-deep); box-shadow: 0 14px 30px rgba(23,75,61,.21); }
+    .btn-light { color: var(--ink); background: rgba(255,255,255,.75); border-color: var(--line); }
+    .btn-light:hover { background: #fff; border-color: #b9c8b9; }
+    .btn svg { width: 17px; height: 17px; flex: 0 0 auto; }
+
+    /* Header */
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      border-bottom: 1px solid rgba(226,232,223,.82);
+      background: rgba(246,247,242,.88); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+    }
+    .nav-wrap { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; flex: 0 0 auto; }
+    .brand-logo { display: block; width: 124px; height: 54px; object-fit: contain; }
+    .brand-copy { display: flex; flex-direction: column; justify-content: center; line-height: 1.35; }
+    .brand-copy small { color: var(--muted); font-size: 10px; font-weight: 600; white-space: nowrap; }
+    .brand-fallback { display: none; color: var(--green); font: 800 16px "DM Sans", sans-serif; direction: ltr; }
+    .brand-fallback.show { display: inline; }
+    .brand-mark {
+      width: 43px; height: 43px; display: grid; place-items: center; overflow: hidden;
+      border-radius: 14px; color: var(--lime); background: var(--green);
+      font: 800 14px/1 "DM Sans", sans-serif; letter-spacing: -1px; transform: rotate(-4deg);
+      box-shadow: 0 7px 18px rgba(23,75,61,.18);
+    }
+    .brand-copy { display: flex; flex-direction: column; line-height: 1.3; }
+    .brand-copy strong { font: 800 18px/1.25 "DM Sans", sans-serif; letter-spacing: -.6px; direction: ltr; text-align: right; }
+    .brand-copy small { margin-top: 3px; color: var(--muted); font-size: 10px; font-weight: 500; }
+    .nav-links { display: flex; align-items: center; gap: clamp(15px, 2.1vw, 28px); margin: 0; padding: 0; list-style: none; }
+    .nav-links a { color: #5d6b62; font-size: 12px; font-weight: 600; transition: color .2s ease; }
+    .nav-links a:hover { color: var(--green); }
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    .nav-actions .btn { min-height: 44px; padding: 9px 17px; font-size: 12px; }
+    .menu-toggle {
+      display: none; width: 44px; height: 44px; align-items: center; justify-content: center;
+      color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 14px; cursor: pointer;
+    }
+    .menu-toggle svg { width: 21px; height: 21px; }
+
+    /* Hero */
+    .hero { position: relative; overflow: hidden; padding: 82px 0 70px; }
+    .hero::before, .hero::after { content: ""; position: absolute; z-index: -1; border-radius: 50%; pointer-events: none; }
+    .hero::before { width: 600px; height: 600px; top: -310px; left: -220px; background: radial-gradient(circle, rgba(216,239,131,.32), rgba(216,239,131,0) 70%); }
+    .hero::after { width: 450px; height: 450px; right: -280px; bottom: -250px; background: radial-gradient(circle, rgba(198,219,204,.55), rgba(198,219,204,0) 70%); }
+    .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: clamp(36px, 6vw, 78px); }
+    .hero-copy { position: relative; z-index: 2; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 10px; padding: 7px 13px 7px 15px; margin-bottom: 24px; border: 1px solid #dfe8d8; border-radius: 999px; color: var(--green); background: rgba(255,255,255,.68); font-size: 11px; font-weight: 700; }
+    .badge-dot { width: 7px; height: 7px; border-radius: 50%; background: #8eaa50; box-shadow: 0 0 0 5px rgba(142,170,80,.13); }
+    .hero h1 { max-width: 690px; }
+    .hero-description { max-width: 570px; margin: 0 0 29px; color: #68766e; font-size: 15px; line-height: 2.25; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-footnote { display: flex; align-items: center; gap: 10px; margin-top: 28px; color: #77837b; font-size: 11px; }
+    .hero-footnote svg { width: 17px; height: 17px; color: #648248; flex: 0 0 auto; }
+    .hero-visual { min-height: 490px; position: relative; display: grid; place-items: center; isolation: isolate; }
+    .visual-aura { position: absolute; width: min(430px, 90%); aspect-ratio: 1; border-radius: 48% 52% 45% 55% / 50% 43% 57% 50%; background: linear-gradient(145deg, #d9ed91, #e9f1d7 66%, #e0ebdf); transform: rotate(-9deg); }
+    .visual-grid { position: absolute; width: 440px; max-width: 95%; aspect-ratio: 1; border: 1px solid rgba(23,75,61,.13); border-radius: 50%; }
+    .visual-grid::before, .visual-grid::after { content: ""; position: absolute; border: 1px solid rgba(23,75,61,.10); border-radius: 50%; }
+    .visual-grid::before { inset: 22px; }
+    .visual-grid::after { inset: 47px; }
+    .mockup {
+      position: relative; z-index: 2; width: min(430px, 88%); padding: 12px;
+      border: 1px solid rgba(23,38,31,.08); border-radius: 22px; background: #fff;
+      box-shadow: 0 32px 85px rgba(19,55,43,.19); transform: rotate(-2deg);
+    }
+    .mockup-top { height: 31px; display: flex; align-items: center; justify-content: space-between; padding: 0 7px 8px; direction: ltr; }
+    .mockup-dots { display: flex; gap: 5px; }
+    .mockup-dots i { width: 6px; height: 6px; display: block; border-radius: 50%; background: #dce3dc; }
+    .mockup-url { color: #a3ada5; font: 600 8px "DM Sans", sans-serif; letter-spacing: 1px; }
+    .mockup-screen { min-height: 280px; position: relative; overflow: hidden; padding: 25px; border-radius: 14px; color: #fff; background: var(--green-deep); }
+    .mockup-screen::after { content: ""; position: absolute; width: 270px; height: 270px; left: -125px; bottom: -175px; border: 1px solid rgba(216,239,131,.35); border-radius: 50%; box-shadow: 0 0 0 20px rgba(216,239,131,.04), 0 0 0 42px rgba(216,239,131,.035); }
+    .mockup-topline { display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+    .mockup-mini-logo { font: 800 12px "DM Sans", sans-serif; letter-spacing: 1px; }
+    .mockup-menu { width: 66px; height: 5px; border-radius: 8px; background: rgba(255,255,255,.25); box-shadow: 0 10px 0 rgba(255,255,255,.14), 0 20px 0 rgba(255,255,255,.14); }
+    .mockup-kicker { display: inline-block; margin-top: 39px; padding: 5px 10px; border: 1px solid rgba(216,239,131,.42); border-radius: 99px; color: var(--lime); font-size: 9px; }
+    .mockup-title { max-width: 250px; margin: 13px 0 12px; font-size: clamp(21px, 2.6vw, 29px); line-height: 1.65; font-weight: 850; }
+    .mockup-title span { color: var(--lime); }
+    .mockup-lines { display: grid; gap: 6px; margin-top: 14px; }
+    .mockup-lines i { height: 4px; display: block; border-radius: 10px; background: rgba(255,255,255,.2); }
+    .mockup-lines i:nth-child(1) { width: 62%; }
+    .mockup-lines i:nth-child(2) { width: 46%; }
+    .mockup-lines i:nth-child(3) { width: 29%; }
+    .mockup-bottom { display: flex; justify-content: space-between; align-items: center; padding: 13px 5px 2px; }
+    .mockup-bottom i:first-child { width: 85px; height: 6px; border-radius: 10px; background: #e6ece4; }
+    .mockup-bottom i:last-child { width: 78px; height: 22px; border-radius: 99px; background: var(--lime); }
+    .float-card {
+      position: absolute; z-index: 3; display: flex; align-items: center; gap: 10px;
+      padding: 12px 15px; border: 1px solid rgba(23,38,31,.07); border-radius: 16px;
+      color: var(--ink-soft); background: rgba(255,255,255,.94); box-shadow: var(--shadow-soft);
+      font-size: 10px; font-weight: 750;
+    }
+    .float-card svg { width: 19px; height: 19px; color: var(--green); flex: 0 0 auto; }
+    .float-top { top: 55px; right: -5px; transform: rotate(3deg); }
+    .float-bottom { left: -5px; bottom: 53px; transform: rotate(-3deg); }
+    .float-icon { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 11px; background: #edf3e3; }
+
+    /* Intro ribbon */
+    .intro-ribbon { padding: 22px 0; border-block: 1px solid var(--line); background: rgba(255,255,255,.48); }
+    .ribbon-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 30px; }
+    .ribbon-title { color: var(--muted); font-size: 11px; font-weight: 650; }
+    .ribbon-items { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .ribbon-items span { padding: 7px 13px; border: 1px solid #e0e7dc; border-radius: 99px; color: #52635a; background: rgba(255,255,255,.7); font-size: 10px; font-weight: 650; }
+
+    /* About / brand */
+    .about-layout { display: grid; grid-template-columns: .94fr 1.06fr; gap: clamp(34px, 6vw, 78px); align-items: center; }
+    .about-visual { min-height: 430px; position: relative; display: grid; place-items: center; }
+    .about-card-visual {
+      width: min(400px, 94%); min-height: 355px; position: relative; overflow: hidden;
+      padding: 28px; border-radius: 30px; color: #fff; background: var(--green);
+      box-shadow: 0 28px 70px rgba(23,75,61,.17);
+    }
+    .about-card-visual::before, .about-card-visual::after { content: ""; position: absolute; border: 1px solid rgba(216,239,131,.28); border-radius: 50%; }
+    .about-card-visual::before { width: 300px; height: 300px; left: -125px; bottom: -175px; }
+    .about-card-visual::after { width: 220px; height: 220px; left: -85px; bottom: -135px; }
+    .about-card-eyebrow { color: var(--lime); font: 700 10px "DM Sans", sans-serif; letter-spacing: 2px; direction: ltr; text-align: right; }
+    .about-card-visual h3 { position: relative; z-index: 1; max-width: 280px; margin: 35px 0 17px; font-size: 30px; line-height: 1.7; }
+    .about-card-visual p { position: relative; z-index: 1; max-width: 270px; margin: 0; color: rgba(255,255,255,.72); font-size: 12px; line-height: 2.1; }
+    .about-stamp { position: absolute; z-index: 2; left: 25px; bottom: 25px; width: 72px; height: 72px; display: grid; place-items: center; border: 1px solid rgba(216,239,131,.45); border-radius: 50%; color: var(--lime); font: 800 18px "DM Sans", sans-serif; transform: rotate(-12deg); }
+    .about-note { position: absolute; right: -10px; bottom: 35px; z-index: 3; display: flex; align-items: center; gap: 11px; padding: 13px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: var(--shadow-soft); }
+    .about-note-mark { width: 37px; height: 37px; display: grid; place-items: center; border-radius: 12px; color: var(--green); background: var(--lime); font: 800 12px "DM Sans", sans-serif; }
+    .about-note span { display: block; color: var(--muted); font-size: 9px; }
+    .about-note strong { display: block; color: var(--ink); font-size: 11px; }
+    .about-copy h2 { max-width: 600px; }
+    .about-copy > p:not(.eyebrow) { margin: 18px 0 0; color: var(--muted); font-size: 13px; line-height: 2.35; }
+    .founder-line { display: flex; align-items: center; gap: 13px; margin-top: 28px; padding-top: 23px; border-top: 1px solid var(--line); }
+    .founder-photo-wrap { position: relative; width: 58px; height: 58px; flex: 0 0 auto; overflow: hidden; display: grid; place-items: center; border-radius: 18px; color: var(--green); background: var(--green-light); font: 800 14px "DM Sans", sans-serif; }
+    .founder-photo-wrap img { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: cover; }
+    .founder-fallback { position: relative; z-index: 0; }
+    .founder-meta small { display: block; color: var(--muted); font-size: 10px; }
+    .founder-meta strong { display: block; margin-top: 1px; font-size: 13px; }
+
+    /* Services */
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .service-card {
+      min-height: 224px; padding: 25px 24px; border: 1px solid var(--line); border-radius: 21px;
+      background: #fff; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .service-card:hover { transform: translateY(-5px); border-color: #cfddca; box-shadow: var(--shadow-soft); }
+    .service-icon { width: 48px; height: 48px; display: grid; place-items: center; margin-bottom: 22px; border-radius: 15px; color: var(--green); background: var(--green-light); }
+    .service-card:nth-child(2) .service-icon { background: var(--lavender); }
+    .service-card:nth-child(3) .service-icon { background: var(--peach); }
+    .service-card:nth-child(4) .service-icon { background: var(--blue); }
+    .service-card:nth-child(5) .service-icon { background: #f2edcf; }
+    .service-card:nth-child(6) .service-icon { background: #e9ece8; }
+    .service-icon svg { width: 23px; height: 23px; }
+    .service-card h3 { margin: 0 0 8px; font-size: 15px; }
+    .service-card p { margin: 0; color: var(--muted); font-size: 11px; line-height: 2.15; }
+    .service-foot { display: flex; align-items: center; gap: 12px; margin-top: 27px; padding: 17px 20px; border: 1px dashed #cbd8c7; border-radius: 16px; color: #617067; background: rgba(255,255,255,.5); font-size: 11px; }
+    .service-foot svg { width: 19px; height: 19px; flex: 0 0 auto; color: #708b4e; }
+
+    /* Work */
+    .work-section { background: #fff; }
+    .work-list { display: grid; gap: 22px; }
+    .work-card {
+      display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(260px, .55fr); align-items: stretch;
+      overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: #fff;
+      transition: box-shadow .25s ease, transform .25s ease;
+    }
+    .work-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-soft); }
+    .project-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; min-width: 0; padding: 12px; background: #f0f3ed; }
+    .gallery-shot {
+      position: relative; min-width: 0; min-height: 260px; overflow: hidden; border-radius: 14px;
+      background: linear-gradient(145deg, #dfe9d9, #f6f8f2); isolation: isolate;
+    }
+    .gallery-shot:nth-child(2) { background: linear-gradient(145deg, #e8e5f3, #f8f7fc); }
+    .gallery-shot:nth-child(3) { background: linear-gradient(145deg, #f3dfd0, #fcf5ef); }
+    .gallery-shot img { position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%; display: block; object-fit: cover; cursor: zoom-in; transition: transform .45s ease; }
+    .gallery-shot:hover img { transform: scale(1.045); }
+    .gallery-fallback { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 13px; padding: 12px; text-align: center; color: #526b59; }
+    .fallback-window { width: 78%; height: 70%; display: flex; flex-direction: column; gap: 10px; padding: 10px; border: 1px solid rgba(23,75,61,.15); border-radius: 10px; background: rgba(255,255,255,.55); box-shadow: 0 10px 30px rgba(23,75,61,.07); }
+    .fallback-window::before { content: ""; width: 32%; height: 5px; border-radius: 10px; background: #b8c9b5; box-shadow: 0 11px 0 #e0e7dc; }
+    .fallback-window span { flex: 1; display: block; margin-top: 15px; border-radius: 6px; background: linear-gradient(135deg, rgba(23,75,61,.12), rgba(216,239,131,.35)); }
+    .gallery-fallback small { color: #61736a; font-size: 9px; font-weight: 750; }
+    .project-info { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 30px; }
+    .project-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 11px; color: #82945e; font-size: 10px; font-weight: 800; }
+    .project-meta span:last-child { color: #a3ada5; font: 600 9px "DM Sans", sans-serif; letter-spacing: 1px; }
+    .project-info h3 { margin: 0 0 8px; font-size: 19px; }
+    .project-info p { margin: 0; color: var(--muted); font-size: 11px; line-height: 2.15; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 17px; }
+    .project-tags span { padding: 5px 9px; border-radius: 99px; color: #627168; background: #f0f3ed; font-size: 9px; }
+    .project-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; color: var(--green); font-size: 11px; font-weight: 800; }
+    .project-link svg { width: 15px; height: 15px; transition: transform .2s ease; }
+    .project-link:hover svg { transform: translateX(-4px); }
+    .work-caption { margin: 23px 0 0; color: #88938c; font-size: 10px; }
+
+    /* Why */
+    .why-panel { position: relative; overflow: hidden; padding: 62px; border-radius: 30px; color: #fff; background: var(--green-deep); }
+    .why-panel::before { content: ""; position: absolute; width: 440px; height: 440px; left: -175px; bottom: -280px; border: 1px solid rgba(216,239,131,.22); border-radius: 50%; box-shadow: 0 0 0 30px rgba(216,239,131,.035), 0 0 0 62px rgba(216,239,131,.03); }
+    .why-head { position: relative; z-index: 1; max-width: 660px; margin-bottom: 35px; }
+    .why-head .eyebrow { color: var(--lime); }
+    .why-head h2 { color: #fff; }
+    .why-head p { max-width: 600px; margin: 0; color: rgba(255,255,255,.68); font-size: 12px; line-height: 2.2; }
+    .why-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .why-item { min-height: 185px; padding: 21px 18px; border: 1px solid rgba(255,255,255,.12); border-radius: 17px; background: rgba(255,255,255,.045); }
+    .why-number { display: block; margin-bottom: 20px; color: var(--lime); font: 700 11px "DM Sans", sans-serif; letter-spacing: 1px; }
+    .why-item h3 { margin: 0 0 7px; color: #fff; font-size: 13px; }
+    .why-item p { margin: 0; color: rgba(255,255,255,.63); font-size: 10px; line-height: 2.1; }
+
+    /* Process */
+    .process-layout { display: grid; grid-template-columns: .72fr 1.28fr; gap: 60px; align-items: start; }
+    .process-intro { position: sticky; top: 120px; }
+    .process-intro p:not(.eyebrow) { color: var(--muted); font-size: 12px; line-height: 2.25; }
+    .process-steps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .process-step { min-height: 190px; padding: 24px; border: 1px solid var(--line); border-radius: 20px; background: #fff; }
+    .step-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+    .step-number { color: #879b62; font: 800 11px "DM Sans", sans-serif; letter-spacing: 1px; }
+    .step-icon { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 12px; color: var(--green); background: var(--green-light); }
+    .step-icon svg { width: 17px; height: 17px; }
+    .process-step h3 { margin: 0 0 7px; font-size: 14px; }
+    .process-step p { margin: 0; color: var(--muted); font-size: 10px; line-height: 2.1; }
+
+    /* Extras and pricing */
+    .extra-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+    .extra-card { display: flex; align-items: flex-start; gap: 15px; padding: 21px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.75); }
+    .extra-icon { width: 42px; height: 42px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 13px; color: var(--green); background: var(--green-light); }
+    .extra-icon svg { width: 20px; height: 20px; }
+    .extra-card h3 { margin: 0 0 5px; font-size: 12px; }
+    .extra-card p { margin: 0; color: var(--muted); font-size: 10px; line-height: 2; }
+    .pricing-section { background: #fff; }
+    .pricing-intro { max-width: 720px; margin: 0 auto 38px; text-align: center; }
+    .pricing-intro .eyebrow { justify-content: center; }
+    .pricing-intro p:last-child { max-width: 570px; margin: 0 auto; color: var(--muted); font-size: 12px; line-height: 2.2; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; max-width: 850px; margin: 0 auto; }
+    .pricing-card { position: relative; overflow: hidden; padding: 31px; border: 1px solid var(--line); border-radius: 22px; background: #fbfcf9; }
+    .pricing-card.featured { color: #fff; border-color: var(--green); background: var(--green); box-shadow: 0 22px 50px rgba(23,75,61,.16); }
+    .pricing-top { display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+    .pricing-index { color: #8a9a6a; font: 800 11px "DM Sans", sans-serif; letter-spacing: 1.5px; }
+    .featured .pricing-index { color: var(--lime); }
+    .pricing-label { padding: 5px 10px; border-radius: 99px; color: #617169; background: #edf2e8; font-size: 9px; font-weight: 700; }
+    .featured .pricing-label { color: var(--green-deep); background: var(--lime); }
+    .pricing-card h3 { margin: 19px 0 5px; font-size: 21px; }
+    .pricing-description { min-height: 48px; margin: 0; color: var(--muted); font-size: 11px; line-height: 2.1; }
+    .featured .pricing-description { color: rgba(255,255,255,.67); }
+    .pricing-divider { height: 1px; margin: 22px 0; background: var(--line); }
+    .featured .pricing-divider { background: rgba(255,255,255,.17); }
+    .pricing-features { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .pricing-features li { display: flex; align-items: flex-start; gap: 9px; color: #59685f; font-size: 11px; }
+    .featured .pricing-features li { color: rgba(255,255,255,.82); }
+    .pricing-features svg { width: 15px; height: 15px; flex: 0 0 auto; margin-top: 3px; color: #7e9b4c; }
+    .featured .pricing-features svg { color: var(--lime); }
+    .price-row { display: flex; align-items: baseline; gap: 9px; margin-top: 26px; }
+    .price-row small { color: var(--muted); font-size: 10px; }
+    .featured .price-row small { color: rgba(255,255,255,.65); }
+    .price-row strong { font-size: 22px; font-weight: 850; }
+    .price-row strong span { font-size: 11px; font-weight: 600; }
+    .pricing-card .btn { width: 100%; margin-top: 22px; }
+    .pricing-card.featured .btn { color: var(--green-deep); background: var(--lime); }
+    .pricing-note { margin: 22px auto 0; color: #87928a; text-align: center; font-size: 10px; }
+
+    /* FAQ */
+    .faq-layout { display: grid; grid-template-columns: .7fr 1.3fr; gap: 70px; align-items: start; }
+    .faq-intro { position: sticky; top: 120px; }
+    .faq-intro p:not(.eyebrow) { color: var(--muted); font-size: 12px; line-height: 2.2; }
+    .faq-contact { display: inline-flex; align-items: center; gap: 8px; margin-top: 13px; color: var(--green); font-size: 11px; font-weight: 800; }
+    .faq-contact svg { width: 15px; height: 15px; }
+    .faq-list { border-top: 1px solid var(--line); }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-item summary { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 21px 0; cursor: pointer; list-style: none; font-size: 13px; font-weight: 750; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: "+"; width: 29px; height: 29px; flex: 0 0 auto; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--green); background: #fff; font: 500 19px/1 "DM Sans", sans-serif; transition: transform .2s ease, background .2s ease; }
+    .faq-item[open] summary::after { content: "−"; background: var(--lime); border-color: var(--lime); transform: rotate(180deg); }
+    .faq-answer { max-width: 680px; padding: 0 0 19px; color: var(--muted); font-size: 11px; line-height: 2.25; }
+    .faq-item:last-child summary { color: var(--green); }
+
+    /* Contact */
+    .contact-section { padding-top: 35px; }
+    .contact-panel { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: 50px; align-items: center; overflow: hidden; padding: 55px; border-radius: 30px; color: #fff; background: var(--green-deep); }
+    .contact-panel::before { content: ""; position: absolute; width: 420px; height: 420px; left: -190px; top: -285px; border: 1px solid rgba(216,239,131,.22); border-radius: 50%; box-shadow: 0 0 0 30px rgba(216,239,131,.035), 0 0 0 60px rgba(216,239,131,.025); }
+    .contact-copy, .contact-aside { position: relative; z-index: 1; }
+    .contact-copy .eyebrow { color: var(--lime); }
+    .contact-copy h2 { max-width: 600px; margin-bottom: 13px; color: #fff; }
+    .contact-copy > p:not(.eyebrow) { max-width: 570px; margin-bottom: 25px; color: rgba(255,255,255,.67); font-size: 12px; line-height: 2.25; }
+    .contact-aside { padding: 26px; border: 1px solid rgba(255,255,255,.13); border-radius: 20px; background: rgba(255,255,255,.055); }
+    .contact-aside-icon { width: 44px; height: 44px; display: grid; place-items: center; margin-bottom: 17px; border-radius: 14px; color: var(--green-deep); background: var(--lime); }
+    .contact-aside-icon svg { width: 22px; height: 22px; }
+    .contact-aside h3 { margin: 0 0 7px; color: #fff; font-size: 16px; }
+    .contact-aside p { margin: 0 0 17px; color: rgba(255,255,255,.64); font-size: 10px; line-height: 2.1; }
+    .telegram-handle { display: inline-flex; align-items: center; gap: 10px; color: var(--lime); font: 700 12px "DM Sans", sans-serif; direction: ltr; }
+    .telegram-handle svg { width: 16px; height: 16px; }
+    .contact-cta { margin-top: 23px; }
+    .contact-cta .btn { color: var(--green-deep); background: var(--lime); }
+
+    /* Footer */
+    .site-footer { padding: 28px 0; border-top: 1px solid var(--line); background: #f0f3ed; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+    .footer-brand { display: flex; align-items: center; gap: 10px; }
+    .footer-brand .brand-logo { width: 100px; height: 46px; }
+    .footer-brand strong { display: block; font: 800 15px "DM Sans", sans-serif; direction: ltr; text-align: right; }
+    .footer-brand small { display: block; color: var(--muted); font-size: 9px; }
+    .footer-copy { color: #7e8a82; font-size: 9px; text-align: center; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 17px; }
+    .footer-links a { color: #647168; font-size: 10px; font-weight: 650; }
+    .footer-links a:hover { color: var(--green); }
+    .back-top { display: inline-flex; align-items: center; gap: 7px; color: var(--green); font-size: 10px; font-weight: 800; white-space: nowrap; }
+    .back-top svg { width: 15px; height: 15px; }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center;
+      padding: 35px; background: rgba(10, 22, 17, .9); backdrop-filter: blur(9px);
+    }
+    .lightbox.is-open { display: flex; }
+    .lightbox img { display: block; max-width: min(1120px, 94vw); max-height: 84vh; object-fit: contain; border-radius: 12px; box-shadow: 0 25px 80px rgba(0,0,0,.35); }
+    .lightbox-close { position: absolute; top: 20px; left: 23px; width: 46px; height: 46px; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; color: #fff; background: rgba(255,255,255,.1); font-size: 27px; cursor: pointer; }
+    .gallery-shot img:focus-visible, .faq-item summary:focus-visible, a:focus-visible, button:focus-visible { outline: 3px solid var(--lime-deep); outline-offset: 3px; }
+
+    /* Reveal effects are enabled only when JavaScript is available. */
+    .js-reveal { opacity: 1; transform: none; }
+    html.js-enabled .js-reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+    html.js-enabled .js-reveal.revealed { opacity: 1; transform: none; }
+
+    @media (max-width: 1020px) {
+      .nav-links { gap: 14px; }
+      .nav-links a { font-size: 11px; }
+      .hero-grid { gap: 28px; }
+      .why-panel { padding: 45px; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-layout { gap: 35px; }
+      .faq-layout { gap: 42px; }
+    }
+    @media (max-width: 820px) {
+      .container { width: min(var(--container), calc(100% - 36px)); }
+      .section { padding: 78px 0; }
+      .nav-wrap { min-height: 74px; }
+      .nav-actions > .btn { display: none; }
+      .menu-toggle { display: inline-flex; }
+      .nav-links {
+        position: absolute; top: calc(100% + 1px); right: 0; left: 0; display: none;
+        align-items: stretch; gap: 0; padding: 10px 18px 18px; border-bottom: 1px solid var(--line);
+        background: rgba(246,247,242,.98); box-shadow: 0 20px 28px rgba(20,48,37,.08);
+      }
+      .nav-links.is-open { display: flex; flex-direction: column; }
+      .nav-links li { border-bottom: 1px solid #e8ede5; }
+      .nav-links li:last-child { border-bottom: 0; }
+      .nav-links a { display: block; padding: 12px 4px; font-size: 13px; }
+      .hero { padding: 60px 0 55px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 10px; }
+      .hero-copy { max-width: 700px; }
+      .hero-visual { min-height: 430px; }
+      .mockup { width: min(420px, 82%); }
+      .mockup-screen { min-height: 250px; }
+      .section-head { align-items: flex-start; flex-direction: column; gap: 12px; margin-bottom: 30px; }
+      .section-lead { max-width: 650px; }
+      .about-layout { grid-template-columns: 1fr; gap: 30px; }
+      .about-visual { min-height: 370px; }
+      .about-card-visual { min-height: 320px; }
+      .work-card { grid-template-columns: 1fr; }
+      .project-gallery { order: 1; }
+      .project-info { order: 2; padding: 25px; }
+      .gallery-shot { min-height: clamp(160px, 30vw, 235px); }
+      .process-layout, .faq-layout { grid-template-columns: 1fr; gap: 28px; }
+      .process-intro, .faq-intro { position: static; }
+      .contact-panel { grid-template-columns: 1fr; gap: 28px; padding: 38px; }
+      .footer-inner { flex-wrap: wrap; }
+      .footer-copy { order: 4; flex-basis: 100%; text-align: right; }
+    }
+    @media (max-width: 600px) {
+      .container { width: calc(100% - 30px); }
+      .section { padding: 65px 0; }
+      h1 { font-size: clamp(37px, 10vw, 51px); letter-spacing: -1.8px; }
+      h2 { font-size: clamp(27px, 7.5vw, 34px); }
+      .hero-description { font-size: 13px; }
+      .hero-actions { align-items: stretch; flex-direction: column; }
+      .hero-actions .btn { width: 100%; }
+      .hero-visual { min-height: 360px; margin-top: 4px; }
+      .visual-aura { width: 310px; }
+      .visual-grid { width: 330px; }
+      .mockup { width: 85%; padding: 9px; }
+      .mockup-screen { min-height: 215px; padding: 19px; }
+      .mockup-kicker { margin-top: 29px; }
+      .float-card { padding: 9px 11px; font-size: 9px; }
+      .float-top { top: 24px; right: 0; }
+      .float-bottom { left: -2px; bottom: 22px; }
+      .intro-ribbon { padding: 18px 0; }
+      .ribbon-inner { align-items: flex-start; flex-direction: column; gap: 12px; }
+      .ribbon-items { gap: 7px; }
+      .ribbon-items span { padding: 6px 10px; font-size: 9px; }
+      .about-visual { min-height: 330px; }
+      .about-card-visual { min-height: 285px; padding: 23px; }
+      .about-card-visual h3 { margin-top: 27px; font-size: 25px; }
+      .about-note { right: 0; bottom: 9px; }
+      .service-grid { grid-template-columns: 1fr; gap: 11px; }
+      .service-card { min-height: unset; padding: 21px; }
+      .service-icon { margin-bottom: 14px; }
+      .service-foot { align-items: flex-start; padding: 14px; }
+      .project-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; padding: 8px; }
+      .gallery-shot { min-height: 132px; border-radius: 9px; }
+      .fallback-window { width: 86%; height: 63%; gap: 5px; padding: 6px; }
+      .fallback-window::before { height: 4px; box-shadow: 0 8px 0 #e0e7dc; }
+      .gallery-fallback small { font-size: 8px; }
+      .project-info { padding: 20px; }
+      .why-panel { padding: 30px 21px; border-radius: 22px; }
+      .why-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+      .why-item { min-height: 175px; padding: 16px 13px; }
+      .why-number { margin-bottom: 12px; }
+      .process-steps { grid-template-columns: 1fr; gap: 10px; }
+      .process-step { min-height: 0; padding: 20px; }
+      .step-top { margin-bottom: 15px; }
+      .extra-grid { grid-template-columns: 1fr; gap: 10px; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-card { padding: 25px; }
+      .contact-panel { padding: 28px 20px; border-radius: 23px; }
+      .contact-aside { padding: 21px; }
+      .footer-inner { gap: 17px; }
+      .footer-links { gap: 13px; }
+      .back-top { margin-right: auto; }
+      .lightbox { padding: 18px; }
+      .lightbox-close { top: 12px; left: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      html.js-enabled .js-reveal { opacity: 1; transform: none; }
+    }
+  
+    /* پنجره تأیید کپی شناسه تلگرام */
+    .telegram-modal { position: fixed; inset: 0; z-index: 3000; display: none; align-items: center; justify-content: center; padding: 22px; background: rgba(12, 24, 19, .58); backdrop-filter: blur(7px); }
+    .telegram-modal.is-open { display: flex; }
+    .telegram-modal-card { width: min(100%, 430px); padding: 30px; border: 1px solid rgba(255,255,255,.7); border-radius: 24px; background: var(--paper, #f7f7f3); box-shadow: 0 24px 80px rgba(0,0,0,.24); text-align: center; animation: telegramModalIn .22s ease-out; }
+    .telegram-modal-icon { width: 54px; height: 54px; display: grid; place-items: center; margin: 0 auto 17px; border-radius: 18px; color: var(--ink, #182821); background: var(--lime, #d8f078); font-size: 25px; }
+    .telegram-modal-card h3 { margin: 0 0 10px; color: var(--ink, #182821); font-size: 21px; }
+    .telegram-modal-card p { margin: 0; color: var(--muted, #68756d); font-size: 14px; line-height: 1.9; }
+    .telegram-modal-username { display: inline-block; margin-top: 9px; direction: ltr; color: var(--ink, #182821); font: 700 15px "DM Sans", sans-serif; }
+    .telegram-modal-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 24px; }
+    .telegram-modal-actions button { min-height: 46px; padding: 0 22px; border: 0; border-radius: 999px; cursor: pointer; font: inherit; font-size: 14px; font-weight: 700; transition: transform .2s ease, opacity .2s ease; }
+    .telegram-modal-actions button:hover { transform: translateY(-2px); }
+    .telegram-modal-ok { color: var(--ink, #182821); background: #e8ebe6; }
+    .telegram-modal-continue { color: #fff; background: var(--green, #214b3b); }
+    @keyframes telegramModalIn { from { opacity: 0; transform: translateY(10px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    body.telegram-modal-open { overflow: hidden; }
+    @media (max-width: 480px) { .telegram-modal-card { padding: 25px 20px; } .telegram-modal-actions { flex-direction: column-reverse; } .telegram-modal-actions button { width: 100%; } }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="WEBDEK، صفحه اصلی">
+        <img class="brand-logo" src="assets/webdek-logo.png" alt="لوگوی WEBDEK" onerror="this.style.display='none';this.nextElementSibling.classList.add('show')">
+        <span class="brand-copy"><span class="brand-fallback">WEBDEK</span><small>تیم طراحی وب‌سایت</small></span>
+      </a>
+      <nav aria-label="منوی اصلی">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">درباره ما</a></li>
+          <li><a href="#services">خدمات</a></li>
+          <li><a href="#work">نمونه‌کارها</a></li>
+          <li><a href="#process">مراحل همکاری</a></li>
+          <li><a href="#pricing">تعرفه</a></li>
+          <li><a href="#faq">سؤالات متداول</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="#contact">شروع یک پروژه <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="باز کردن منو" aria-expanded="false" aria-controls="navLinks">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy js-reveal">
+          <div class="hero-badge"><span class="badge-dot"></span> WEBDEK · تیم طراحی وب‌سایت</div>
+          <h1>برای حضوری <span class="text-highlight">حرفه‌ای</span> در دنیای دیجیتال.</h1>
+          <p class="hero-description">در WEBDEK وب‌سایت‌هایی طراحی می‌کنیم که هویت و توانمندی‌های شما را با زبانی بصری، منسجم و حرفه‌ای به مخاطب معرفی کنند. از ایده و ساختار صفحات تا جزئیات گرافیکی، هر بخش با توجه به هدف و ویژگی‌های پروژه شکل می‌گیرد.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#work">دیدن نمونه‌کارها <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 12H5m7 7-7-7 7-7"/></svg></a>
+            <a class="btn btn-light" href="#contact">درباره پروژه‌تان صحبت کنیم</a>
+          </div>
+          <div class="hero-footnote">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.5 3.2 7.7 7.5 9.5 4.3-1.8 7.5-5 7.5-9.5V6L12 3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg>
+            طراحی متناسب با هویت شما · تجربه کاربری روان · نمایش هماهنگ در همه دستگاه‌ها
+          </div>
+        </div>
+
+        <div class="hero-visual js-reveal" aria-label="نمای گرافیکی از یک وب‌سایت طراحی‌شده">
+          <div class="visual-aura"></div><div class="visual-grid"></div>
+          <div class="mockup">
+            <div class="mockup-top"><div class="mockup-dots"><i></i><i></i><i></i></div><span class="mockup-url">YOUR WEBSITE / WEBDEK</span></div>
+            <div class="mockup-screen">
+              <div class="mockup-topline"><span class="mockup-mini-logo">YOUR BRAND</span><span class="mockup-menu"></span></div>
+              <span class="mockup-kicker">یک حضور تازه در فضای وب</span>
+              <div class="mockup-title">داستان شما،<br><span>زیباتر دیده می‌شود.</span></div>
+              <div class="mockup-lines"><i></i><i></i><i></i></div>
+            </div>
+            <div class="mockup-bottom"><i></i><i></i></div>
+          </div>
+          <div class="float-card float-top"><span class="float-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M8 6.5h.01M11 6.5h.01"/></svg></span>طراحی هماهنگ با هویت برند</div>
+          <div class="float-card float-bottom"><span class="float-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18h4"/></svg></span>تجربه‌ای روان در موبایل و دسکتاپ</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="intro-ribbon" aria-label="زمینه‌های طراحی وب‌سایت">
+      <div class="container ribbon-inner">
+        <span class="ribbon-title">طراحی وب‌سایت برای مجموعه‌هایی که می‌خواهند حرفه‌ای دیده شوند</span>
+        <div class="ribbon-items"><span>شرکتی و صنعتی</span><span>علمی و آموزشی</span><span>شخصی و رزومه</span><span>هنری و فرهنگی</span><span>معرفی خدمات</span></div>
+      </div>
+    </div>
+
+    <section class="section" id="about">
+      <div class="container about-layout">
+        <div class="about-visual js-reveal">
+          <div class="about-card-visual">
+            <div class="about-card-eyebrow">DESIGN WITH CLARITY</div>
+            <h3>طراحی دقیق،<br>تأثیری ماندگار می‌سازد.</h3>
+            <p>هر جزئیات باید دلیلی برای حضور داشته باشد؛ از ساختار صفحه تا رنگ‌ها و مسیر حرکت مخاطب.</p>
+          </div>
+        </div>
+        <div class="about-copy js-reveal">
+          <p class="eyebrow">درباره WEBDEK</p>
+          <h2>هر وب‌سایت باید <span class="text-highlight">هویت خودش را داشته باشد.</span></h2>
+          <p>WEBDEK یک تیم طراحی وب‌سایت است که با نگاه دقیق به هویت هر مجموعه، تجربه‌ای منسجم و متناسب با نیاز آن خلق می‌کند. هدف ما فقط کنار هم قرار دادن چند صفحه نیست؛ می‌خواهیم وب‌سایت، تصویری روشن و قابل‌اعتماد از برند شما ارائه دهد.</p>
+          <p>از وب‌سایت یک شرکت صنعتی تا صفحه معرفی یک متخصص یا مؤسسه آموزشی، هر پروژه با شناخت مخاطب، اولویت‌های محتوایی و ویژگی‌های بصری همان مجموعه پیش می‌رود. نتیجه، وب‌سایتی اختصاصی است که هم چشم‌نواز باشد و هم اطلاعات را به‌شکلی روشن و قابل‌دسترسی ارائه کند.</p>
+          <div class="founder-line">
+            <span class="founder-photo-wrap"><img src="assets/ebrahim.png" alt="ابراهیم کمالیان، بنیان‌گذار WEBDEK" loading="lazy" onerror="this.style.display='none'"><span class="founder-fallback">EK</span></span>
+            <span class="founder-meta"><small>بنیان‌گذار و مدیر WEBDEK</small><strong>ابراهیم کمالیان</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head-copy"><p class="eyebrow">خدمات ما</p><h2>برای هر معرفی،<br>یک ساختار درست.</h2></div>
+          <p class="section-lead">تمرکز WEBDEK روی وب‌سایت‌هایی است که خدمات، توانمندی‌ها و هویت یک فرد یا مجموعه را حرفه‌ای معرفی می‌کنند. طراحی‌ها متناسب با نیاز پروژه شکل می‌گیرند، نه بر اساس یک قالب ثابت.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card js-reveal">
+            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 20V7l9-4 9 4v13H3Z"/><path d="M8 20v-6h8v6M7 9h.01M12 9h.01M17 9h.01"/></svg></span>
+            <h3>وب‌سایت شرکتی و صنعتی</h3><p>معرفی شرکت، زمینه فعالیت، توانمندی‌ها، پروژه‌ها، گواهی‌ها و راه‌های ارتباطی در ساختاری منظم.</p>
+          </article>
+          <article class="service-card js-reveal">
+            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span>
+            <h3>وب‌سایت علمی و آموزشی</h3><p>معرفی مؤسسه، دوره‌ها، فعالیت‌های آموزشی، مقاله‌ها، پژوهش‌ها و رویدادها.</p>
+          </article>
+          <article class="service-card js-reveal">
+            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg></span>
+            <h3>وب‌سایت معرفی خدمات</h3><p>ارائه روشن خدمات، مزیت‌ها و اطلاعات ضروری برای آشنایی سریع‌تر مخاطب با کسب‌وکار.</p>
+          </article>
+          <article class="service-card js-reveal">
+            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></span>
+            <h3>وب‌سایت هنری و گالری</h3><p>نمایش آثار، تصاویر، نمونه‌کارها و معرفی هنرمند یا مجموعه با تمرکز بر جلوه بصری.</p>
+          </article>
+          <article class="service-card js-reveal">
+            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 21V4h16v17M8 8h2m4 0h2M8 12h2m4 0h2M8 16h2m4 0h2M2 21h20"/></svg></span>
+            <h3>وب‌سایت مجتمع و انجمن</h3><p>معرفی بخش‌ها، اعضا، امکانات، اخبار و اطلاعات موردنیاز مراجعه‌کنندگان.</p>
+          </article>
+          <article class="service-card js-reveal">
+            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg></span>
+            <h3>وب‌سایت شخصی و رزومه</h3><p>معرفی سوابق، مهارت‌ها، دستاوردها، فعالیت‌ها و راه‌های ارتباط با افراد متخصص.</p>
+          </article>
+        </div>
+        <div class="service-foot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg><span>ایده مشخصی ندارید؟ کافی است درباره مجموعه و هدف‌تان صحبت کنیم تا ساختار مناسب وب‌سایت را با هم پیدا کنیم.</span></div>
+      </div>
+    </section>
+
+    <section class="section work-section" id="work">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head-copy"><p class="eyebrow">گزیده پروژه‌ها</p><h2>نمونه‌هایی از نگاه ما به طراحی.</h2></div>
+          <p class="section-lead">هر پروژه، ترکیبی از هویت بصری، محتوای درست و ساختاری کاربردی است. برای بزرگ‌نمایی تصاویر روی آن‌ها کلیک کنید؛ ورود به نمونه‌کار از طریق دکمه اختصاصی هر پروژه انجام می‌شود.</p>
+        </div>
+
+        <div class="work-list">
+          <article class="work-card js-reveal">
+            <div class="project-gallery" aria-label="تصاویر وب‌سایت شرکت مهندسی نیک صنعت تیس">
+              <div class="gallery-shot"><img src="assets/company-01.jpg" data-image-base="company-01" alt="صفحه اصلی وب‌سایت شرکت مهندسی نیک صنعت تیس" loading="lazy"><div class="gallery-fallback"><span class="fallback-window"><span></span></span><small>صفحه اصلی</small></div></div>
+              <div class="gallery-shot"><img src="assets/company-02.jpg" data-image-base="company-02" alt="بخش خدمات و توانمندی‌های شرکت" loading="lazy"><div class="gallery-fallback"><span class="fallback-window"><span></span></span><small>خدمات و توانمندی‌ها</small></div></div>
+              <div class="gallery-shot"><img src="assets/company-03.jpg" data-image-base="company-03" alt="بخش پروژه‌ها و اطلاعات شرکت" loading="lazy"><div class="gallery-fallback"><span class="fallback-window"><span></span></span><small>پروژه‌ها</small></div></div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta"><span>شرکتی و صنعتی</span><span>PROJECT 01</span></div>
+              <h3>شرکت مهندسی نیک صنعت تیس</h3>
+              <p>وب‌سایت معرفی یک مجموعه مهندسی با تمرکز بر زمینه فعالیت، توانمندی‌ها، محصولات و اطلاعات ارتباطی.</p>
+              <div class="project-tags"><span>معرفی شرکت</span><span>خدمات صنعتی</span><span>طراحی واکنش‌گرا</span></div>
+              <a class="project-link" href="https://nstis.ir" target="_blank" rel="noopener noreferrer">مشاهده وب‌سایت زنده <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+            </div>
+          </article>
+
+          <article class="work-card js-reveal">
+            <div class="project-gallery" aria-label="تصاویر نمونه وب‌سایت مؤسسه علمی و پژوهشی">
+              <div class="gallery-shot"><img src="assets/science-01.jpg" data-image-base="science-01" alt="صفحه اصلی نمونه وب‌سایت مؤسسه علمی" loading="lazy"><div class="gallery-fallback"><span class="fallback-window"><span></span></span><small>صفحه اصلی</small></div></div>
+              <div class="gallery-shot"><img src="assets/science-02.jpg" data-image-base="science-02" alt="بخش پژوهش‌ها و مقاله‌های مؤسسه" loading="lazy"><div class="gallery-fallback"><span class="fallback-window"><span></span></span><small>پژوهش و مقاله</small></div></div>
+              <div class="gallery-shot"><img src="assets/science-03.jpg" data-image-base="science-03" alt="بخش رویدادهای نمونه وب‌سایت علمی" loading="lazy"><div class="gallery-fallback"><span class="fallback-window"><span></span></span><small>رویدادها</small></div></div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta"><span>علمی و پژوهشی</span><span>PROJECT 02</span></div>
+              <h3>مؤسسه علمی و پژوهشی</h3>
+              <p>ساختاری برای معرفی فعالیت‌ها، پژوهش‌ها، مقالات و رویدادها با دسته‌بندی روشن و دسترسی آسان.</p>
+              <div class="project-tags"><span>محتوای علمی</span><span>رویدادها</span><span>معرفی مؤسسه</span></div>
+              <a class="project-link" href="khayyam.html">مشاهده نمونه‌کار <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 12H5m7 7-7-7 7-7"/></svg></a>
+            </div>
+          </article>
+
+          <article class="work-card js-reveal">
+            <div class="project-gallery" aria-label="تصاویر نمونه وب‌سایت شخصی و رزومه">
+              <div class="gallery-shot"><img src="assets/personal-01.jpg" data-image-base="personal-01" alt="صفحه معرفی نمونه وب‌سایت شخصی" loading="lazy"><div class="gallery-fallback"><span class="fallback-window"><span></span></span><small>معرفی شخصی</small></div></div>
+              <div class="gallery-shot"><img src="assets/personal-02.jpg" data-image-base="personal-02" alt="بخش مهارت‌ها در نمونه وب‌سایت شخصی" loading="lazy"><div class="gallery-fallback"><span class="fallback-window"><span></span></span><small>مهارت‌ها</small></div></div>
+              <div class="gallery-shot"><img src="assets/personal-03.jpg" data-image-base="personal-03" alt="بخش سوابق و پروژه‌های نمونه وب‌سایت شخصی" loading="lazy"><div class="gallery-fallback"><span class="fallback-window"><span></span></span><small>سوابق و پروژه‌ها</small></div></div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta"><span>شخصی و رزومه</span><span>PROJECT 03</span></div>
+              <h3>وب‌سایت شخصی و رزومه</h3>
+              <p>معرفی توانایی‌ها، سوابق و پروژه‌های یک فرد در فضایی شخصی، خوانا و متناسب با مسیر حرفه‌ای او.</p>
+              <div class="project-tags"><span>رزومه آنلاین</span><span>معرفی مهارت‌ها</span><span>پروژه‌ها</span></div>
+              <a class="project-link" href="personal.html">مشاهده نمونه‌کار <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 12H5m7 7-7-7 7-7"/></svg></a>
+            </div>
+          </article>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="section" id="why">
+      <div class="container">
+        <div class="why-panel js-reveal">
+          <div class="why-head">
+            <p class="eyebrow">چرا WEBDEK؟</p>
+            <h2>طراحی خوب فقط زیبا نیست؛<br>باید درست کار کند.</h2>
+            <p>در هر پروژه تلاش می‌کنیم ظاهر جذاب را با ساختار روشن و استفاده آسان همراه کنیم. نتیجه باید برای مخاطب قابل فهم باشد و برای صاحب کسب‌وکار، ابزار معرفی مؤثری بسازد.</p>
+          </div>
+          <div class="why-grid">
+            <article class="why-item"><span class="why-number">01 / CLARITY</span><h3>ساختار سنجیده</h3><p>چیدمان محتوا و مسیرهای دسترسی به‌گونه‌ای طراحی می‌شوند که مخاطب سریع و راحت به اطلاعات موردنیاز برسد.</p></article>
+            <article class="why-item"><span class="why-number">02 / IDENTITY</span><h3>ظاهر متناسب با شما</h3><p>انتخاب رنگ، چیدمان و جزئیات متناسب با هویت هر مجموعه.</p></article>
+            <article class="why-item"><span class="why-number">03 / RESPONSIVE</span><h3>نمایش در همه دستگاه‌ها</h3><p>توجه به تجربه استفاده در موبایل، تبلت و صفحه‌نمایش کامپیوتر.</p></article>
+            <article class="why-item"><span class="why-number">04 / PERFORMANCE</span><h3>عملکرد روان</h3><p>توجه به سرعت بارگذاری، دسترسی آسان و عملکرد مناسب در دستگاه‌ها و مرورگرهای مختلف.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="process">
+      <div class="container process-layout">
+        <div class="process-intro js-reveal">
+          <p class="eyebrow">مسیر همکاری</p>
+          <h2>از ایده اولیه<br>تا انتشار وب‌سایت.</h2>
+          <p>برای اینکه روند کار روشن باشد، پروژه را مرحله‌به‌مرحله جلو می‌بریم. پیش از شروع، درباره هدف، مخاطب و محتوای موردنیاز صحبت می‌کنیم و سپس مسیر اجرا را مشخص می‌کنیم.</p>
+          <a class="project-link" href="#contact">شروع گفت‌وگو درباره پروژه <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 12H5m7 7-7-7 7-7"/></svg></a>
+        </div>
+        <div class="process-steps">
+          <article class="process-step js-reveal"><div class="step-top"><span class="step-number">STEP 01</span><span class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></span></div><h3>شناخت نیازها</h3><p>هدف وب‌سایت، مخاطبان، محتوای اولیه و انتظارات پروژه مشخص می‌شود.</p></article>
+          <article class="process-step js-reveal"><div class="step-top"><span class="step-number">STEP 02</span><span class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></span></div><h3>ساختار و طراحی</h3><p>صفحات، چیدمان محتوا، رنگ‌بندی و زبان بصری متناسب با پروژه شکل می‌گیرد.</p></article>
+          <article class="process-step js-reveal"><div class="step-top"><span class="step-number">STEP 03</span><span class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m8 8-5 4 5 4M16 8l5 4-5 4M14 4l-4 16"/></svg></span></div><h3>پیاده‌سازی</h3><p>طرح به وب‌سایت تبدیل می‌شود و نسخه‌های مختلف صفحه‌نمایش تنظیم می‌شوند.</p></article>
+          <article class="process-step js-reveal"><div class="step-top"><span class="step-number">STEP 04</span><span class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.5 3.2 7.7 7.5 9.5 4.3-1.8 7.5-5 7.5-9.5V6L12 3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span></div><h3>بررسی و تحویل</h3><p>صفحات و پیوندها بازبینی می‌شوند و وب‌سایت برای انتشار آماده خواهد شد.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="extras">
+      <div class="container">
+        <div class="section-head"><div class="section-head-copy"><p class="eyebrow">در کنار طراحی</p><h2>جزئیاتی که مسیر را کامل می‌کنند.</h2></div><p class="section-lead">بسته به نیاز پروژه، برخی خدمات تکمیلی نیز می‌توانند در کنار طراحی وب‌سایت ارائه شوند.</p></div>
+        <div class="extra-grid">
+          <article class="extra-card js-reveal"><span class="extra-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3 14.8 8.7 21 9.6l-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg></span><div><h3>طراحی لوگو</h3><p>طراحی لوگوی هماهنگ با هویت بصری و فضای وب‌سایت.</p></div></article>
+          <article class="extra-card js-reveal"><span class="extra-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M8 5v14"/></svg></span><div><h3>دامنه و میزبانی</h3><p>راهنمایی برای انتخاب دامنه و هاست و راه‌اندازی اولیه آن‌ها.</p></div></article>
+          <article class="extra-card js-reveal"><span class="extra-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.5 3.2 7.7 7.5 9.5 4.3-1.8 7.5-5 7.5-9.5V6L12 3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span><div><h3>پشتیبانی و اصلاحات</h3><p>رسیدگی به اصلاحات و پشتیبانی فنی طبق توافق هر پروژه.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing-section" id="pricing">
+      <div class="container">
+        <div class="pricing-intro js-reveal">
+          <p class="eyebrow">تعرفه طراحی</p>
+          <h2>شروعی روشن برای حضور آنلاین شما.</h2>
+          <p>هزینه نهایی با توجه به تعداد صفحات، میزان جزئیات طراحی و امکانات موردنیاز مشخص می‌شود. قیمت‌های زیر نقطه شروع گفت‌وگو درباره پروژه هستند.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="pricing-card js-reveal">
+            <div class="pricing-top"><span class="pricing-index">PLAN / 01</span><span class="pricing-label">شروع اقتصادی</span></div>
+            <h3>وب‌سایت معرفی</h3>
+            <p class="pricing-description">مناسب معرفی فرد، کسب‌وکار یا مجموعه با ساختار جمع‌وجور و حرفه‌ای.</p>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>طراحی اختصاصی و واکنش‌گرا</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>معرفی خدمات و اطلاعات تماس</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>ساختار منظم و قابل‌گسترش</li>
+            </ul>
+            <div class="price-row"><small>شروع از</small><strong>۸ میلیون <span>تومان</span></strong></div>
+            <a class="btn btn-primary" href="#contact">درخواست طراحی</a>
+          </article>
+          <article class="pricing-card featured js-reveal">
+            <div class="pricing-top"><span class="pricing-index">PLAN / 02</span><span class="pricing-label">امکانات گسترده‌تر</span></div>
+            <h3>وب‌سایت حرفه‌ای</h3>
+            <p class="pricing-description">مناسب شرکت‌ها و مجموعه‌هایی که صفحات بیشتر و طراحی جزئی‌تری نیاز دارند.</p>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>صفحات و بخش‌های بیشتر</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>طراحی گرافیکی اختصاصی‌تر</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>امکانات و تعاملات متناسب با پروژه</li>
+            </ul>
+            <div class="price-row"><small>هزینه نهایی</small><strong>پس از بررسی</strong></div>
+            <a class="btn" href="#contact">درخواست مشاوره</a>
+          </article>
+        </div>
+        <p class="pricing-note">مبلغ نهایی پس از بررسی نیازها و توافق درباره محدوده پروژه اعلام می‌شود.</p>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container faq-layout">
+        <div class="faq-intro js-reveal">
+          <p class="eyebrow">سؤالات متداول</p>
+          <h2>پیش از شروع،<br>هرچه می‌خواهید بدانید.</h2>
+          <p>پاسخ پرسش‌های رایج درباره خدمات، روند طراحی و نحوه همکاری با WEBDEK را اینجا جمع کرده‌ایم.</p>
+          <a class="faq-contact" href="#contact">سؤال دیگری دارید؟ با ما در تماس باشید <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 12H5m7 7-7-7 7-7"/></svg></a>
+        </div>
+        <div class="faq-list js-reveal">
+          <details class="faq-item"><summary>۱. WEBDEK چه نوع وب‌سایت‌هایی طراحی می‌کند؟</summary><div class="faq-answer">ما روی طراحی وب‌سایت‌های شرکتی، صنعتی، شخصی، علمی، آموزشی، هنری، معرفی خدمات و مجموعه‌های مختلف تمرکز داریم. ساختار و ظاهر هر وب‌سایت متناسب با هدف و هویت همان مجموعه طراحی می‌شود.</div></details>
+          <details class="faq-item"><summary>۲. هزینه طراحی وب‌سایت چقدر است؟</summary><div class="faq-answer">هزینه طراحی به نوع وب‌سایت، تعداد صفحات، جزئیات گرافیکی و امکانات موردنیاز بستگی دارد. پس از بررسی نیازهای پروژه، محدوده هزینه و پیشنهاد مناسب اعلام می‌شود.</div></details>
+          <details class="faq-item"><summary>۳. طراحی یک وب‌سایت چقدر زمان می‌برد؟</summary><div class="faq-answer">زمان اجرا به حجم محتوا، تعداد صفحات و پیچیدگی امکانات بستگی دارد. پس از مشخص شدن محدوده پروژه، زمان‌بندی تقریبی و مراحل تحویل اعلام خواهد شد.</div></details>
+          <details class="faq-item"><summary>۴. آیا وب‌سایت‌ها در موبایل هم به‌درستی نمایش داده می‌شوند؟</summary><div class="faq-answer">بله. طراحی واکنش‌گرا بخشی از روند طراحی است تا صفحات در موبایل، تبلت و کامپیوتر چیدمان و خوانایی مناسبی داشته باشند.</div></details>
+          <details class="faq-item"><summary>۵. آیا می‌توانیم ظاهر و رنگ‌بندی اختصاصی خودمان را داشته باشیم؟</summary><div class="faq-answer">بله. رنگ‌بندی، تایپوگرافی، چیدمان و عناصر بصری با توجه به هویت برند، حوزه فعالیت و سلیقه بصری مورد توافق برای همان پروژه تنظیم می‌شوند.</div></details>
+          <details class="faq-item"><summary>۶. برای شروع طراحی چه اطلاعاتی لازم است؟</summary><div class="faq-answer">در ابتدا دانستن زمینه فعالیت، هدف وب‌سایت، مخاطبان اصلی و خدمات یا اطلاعاتی که باید معرفی شوند کافی است. محتوای موجود، تصاویر و نمونه‌های موردعلاقه نیز می‌توانند به شکل‌گیری طرح کمک کنند.</div></details>
+          <details class="faq-item"><summary>۷. آیا پس از تحویل سایت امکان اصلاح و پشتیبانی وجود دارد؟</summary><div class="faq-answer">بله. جزئیات اصلاحات، پشتیبانی و خدمات پس از تحویل با توجه به نیاز پروژه و توافق اولیه مشخص می‌شود تا محدوده خدمات برای هر دو طرف روشن باشد.</div></details>
+          <details class="faq-item"><summary>۸. آیا برای طراحی سایت باید دامنه و هاست داشته باشیم؟</summary><div class="faq-answer">خیر. اگر هنوز دامنه یا هاست تهیه نکرده‌اید، می‌توانیم درباره انتخاب گزینه مناسب و راه‌اندازی اولیه راهنمایی‌تان کنیم.</div></details>
+          <details class="faq-item"><summary>۹. چطور می‌توانیم سفارش طراحی سایت ثبت کنیم؟</summary><div class="faq-answer">از طریق راه ارتباطی تلگرام در بخش تماس با ما پیام بدهید و زمینه فعالیت و نیاز اولیه‌تان را توضیح دهید. بعد از بررسی، درباره جزئیات و مراحل همکاری صحبت می‌کنیم.</div></details>
+          <details class="faq-item"><summary>۱۰. آیا WEBDEK طراحی فروشگاه اینترنتی هم انجام می‌دهد؟</summary><div class="faq-answer">خیر. حوزه فعالیت WEBDEK طراحی وب‌سایت‌های شرکتی، معرفی، خدماتی و شخصی است و طراحی فروشگاه اینترنتی در خدمات ما قرار ندارد.</div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-panel js-reveal">
+          <div class="contact-copy">
+            <p class="eyebrow">شروع یک همکاری</p>
+            <h2>ایده‌تان را به یک حضور حرفه‌ای در وب تبدیل کنیم.</h2>
+            <p>برای شرکت، مؤسسه، مجموعه یا فعالیت شخصی‌تان به یک وب‌سایت خوش‌ساخت نیاز دارید؟ چند خط درباره ایده و نیازتان بنویسید تا گفت‌وگو را از همان‌جا شروع کنیم.</p>
+            <div class="contact-cta"><a class="btn" href="https://t.me/ebrahimkamalian" target="_blank" rel="noopener noreferrer">گفت‌وگو در تلگرام <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+          </div>
+          <aside class="contact-aside">
+            <span class="contact-aside-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m21 3-7.2 18-3.9-7.3L3 10.2 21 3Z"/><path d="m9.9 13.7 5.2-5.1"/></svg></span>
+            <h3>مستقیم در ارتباط باشید.</h3>
+            <p>برای مطرح کردن ایده، دریافت اطلاعات اولیه و بررسی امکان اجرای پروژه، از طریق تلگرام پیام بدهید.</p>
+            <a class="telegram-handle" href="https://t.me/ebrahimkamalian" target="_blank" rel="noopener noreferrer">@EbrahimKamalian <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <div class="telegram-modal" id="telegramModal" role="dialog" aria-modal="true" aria-labelledby="telegramModalTitle" aria-describedby="telegramModalMessage">
+    <div class="telegram-modal-card" role="document">
+      <div class="telegram-modal-icon" aria-hidden="true">✓</div>
+      <h3 id="telegramModalTitle">شناسه تلگرام کپی شد</h3>
+      <p id="telegramModalMessage">می‌توانید آن را در تلگرام Paste کنید.</p>
+      <span class="telegram-modal-username">@EbrahimKamalian</span>
+      <div class="telegram-modal-actions">
+        <button class="telegram-modal-ok" id="telegramModalOk" type="button">اوکی</button>
+        <button class="telegram-modal-continue" id="telegramModalContinue" type="button">ادامه با سایت</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="footer-brand" href="#home" aria-label="بازگشت به ابتدای صفحه"><img class="brand-logo" src="assets/webdek-logo.png" alt="لوگوی WEBDEK" onerror="this.style.display='none'"><span><strong>WEBDEK</strong><small>تیم طراحی وب‌سایت</small></span></a>
+      <span class="footer-copy">© <span id="year">2026</span> WEBDEK · تمامی حقوق محفوظ است.</span>
+      <div class="footer-links"><a href="#about">درباره ما</a><a href="#services">خدمات</a><a href="#work">نمونه‌کارها</a><a href="#contact">تماس</a></div>
+      <a class="back-top" href="#home">بازگشت به بالا <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 14 6-6 6 6"/></svg></a>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="نمایش بزرگ تصویر نمونه‌کار">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="بستن تصویر">×</button>
+    <img id="lightboxImage" alt="نمایش بزرگ تصویر نمونه‌کار">
+  </div>
+
+  <script>
+    // منوی واکنش‌گرای موبایل
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const closeMenu = () => {
+      navLinks.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'باز کردن منو');
+      document.body.classList.remove('menu-open');
+    };
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('is-open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'بستن منو' : 'باز کردن منو');
+      document.body.classList.toggle('menu-open', isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+
+    // اگر پسوند تصویر با فایل موجود متفاوت بود، پسوندهای رایج بررسی می‌شوند.
+    document.querySelectorAll('.gallery-shot img[data-image-base]').forEach(img => {
+      const base = img.dataset.imageBase;
+      const extensions = ['jpg', 'jpeg', 'png', 'webp', 'avif'];
+      let index = 0;
+      const tryNext = () => {
+        if (index >= extensions.length) {
+          img.style.display = 'none';
+          return;
+        }
+        img.style.display = 'block';
+        img.src = `assets/${base}.${extensions[index++]}`;
+      };
+      img.addEventListener('error', tryNext);
+      img.addEventListener('load', () => {
+        if (img.naturalWidth > 0) {
+          const fallback = img.nextElementSibling;
+          if (fallback) fallback.style.display = 'none';
+        }
+      });
+      tryNext();
+      img.tabIndex = 0;
+      img.setAttribute('role', 'button');
+      img.setAttribute('aria-label', `${img.alt}؛ برای بزرگ‌نمایی انتخاب کنید`);
+    });
+
+    // بزرگ‌نمایی تصاویر نمونه‌کار
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxClose = document.getElementById('lightboxClose');
+    let lastFocusedElement = null;
+    const openLightbox = img => {
+      if (!img || !img.complete || !img.naturalWidth) return;
+      lastFocusedElement = img;
+      lightboxImage.src = img.currentSrc || img.src;
+      lightboxImage.alt = img.alt || 'تصویر نمونه‌کار';
+      lightbox.classList.add('is-open');
+      document.body.classList.add('lightbox-open');
+      lightboxClose.focus();
+    };
+    const closeLightbox = () => {
+      lightbox.classList.remove('is-open');
+      document.body.classList.remove('lightbox-open');
+      lightboxImage.removeAttribute('src');
+      if (lastFocusedElement) lastFocusedElement.focus();
+    };
+    document.querySelectorAll('.gallery-shot img').forEach(img => {
+      img.addEventListener('click', event => { event.stopPropagation(); openLightbox(img); });
+      img.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openLightbox(img);
+        }
+      });
+    });
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', event => { if (event.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox(); });
+
+
+    // کپی شناسه تلگرام و نمایش پنجره انتخاب مسیر ادامه
+    const telegramModal = document.getElementById('telegramModal');
+    const telegramModalOk = document.getElementById('telegramModalOk');
+    const telegramModalContinue = document.getElementById('telegramModalContinue');
+    const telegramUsername = '@EbrahimKamalian';
+    const telegramUrl = 'https://t.me/ebrahimkamalian';
+    let telegramPreviousFocus = null;
+
+    async function copyTelegramUsername() {
+      if (navigator.clipboard && window.isSecureContext) {
+        try {
+          await navigator.clipboard.writeText(telegramUsername);
+          return true;
+        } catch (error) {
+          // در صورت محدودیت Clipboard API از روش جایگزین استفاده می‌شود.
+        }
+      }
+      const temporaryInput = document.createElement('textarea');
+      temporaryInput.value = telegramUsername;
+      temporaryInput.setAttribute('readonly', '');
+      temporaryInput.style.position = 'fixed';
+      temporaryInput.style.opacity = '0';
+      temporaryInput.style.pointerEvents = 'none';
+      document.body.appendChild(temporaryInput);
+      temporaryInput.select();
+      temporaryInput.setSelectionRange(0, temporaryInput.value.length);
+      let copied = false;
+      try { copied = document.execCommand('copy'); } catch (error) { copied = false; }
+      temporaryInput.remove();
+      return copied;
+    }
+
+    function closeTelegramModal() {
+      telegramModal.classList.remove('is-open');
+      document.body.classList.remove('telegram-modal-open');
+      if (telegramPreviousFocus) telegramPreviousFocus.focus();
+    }
+
+    document.querySelectorAll('a[href*="t.me/ebrahimkamalian"]').forEach(link => {
+      link.addEventListener('click', async event => {
+        event.preventDefault();
+        telegramPreviousFocus = link;
+        const copied = await copyTelegramUsername();
+        const title = document.getElementById('telegramModalTitle');
+        const message = document.getElementById('telegramModalMessage');
+        title.textContent = copied ? 'شناسه تلگرام کپی شد' : 'شناسه تلگرام';
+        message.textContent = copied
+          ? 'می‌توانید آن را در تلگرام Paste کنید.'
+          : 'کپی خودکار انجام نشد؛ شناسه بالا را می‌توانید دستی کپی کنید.';
+        telegramModal.classList.add('is-open');
+        document.body.classList.add('telegram-modal-open');
+        telegramModalOk.focus();
+      });
+    });
+
+    telegramModalOk.addEventListener('click', closeTelegramModal);
+    telegramModalContinue.addEventListener('click', () => {
+      window.open(telegramUrl, '_blank', 'noopener,noreferrer');
+      closeTelegramModal();
+    });
+    telegramModal.addEventListener('click', event => {
+      if (event.target === telegramModal) closeTelegramModal();
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && telegramModal.classList.contains('is-open')) closeTelegramModal();
+    });
+
+    // سال خودکار در فوتر
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // نمایان شدن نرم بخش‌ها هنگام اسکرول؛ در صورت پشتیبانی مرورگر
+    document.documentElement.classList.add('js-enabled');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.js-reveal').forEach(element => revealObserver.observe(element));
+    } else {
+      document.querySelectorAll('.js-reveal').forEach(element => element.classList.add('revealed'));
+    }
+  </script>
+</body>
+</html>
